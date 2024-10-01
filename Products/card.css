@@ -1,0 +1,45 @@
+.relatedProductsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2%;
+  padding: 0px 2%;
+  row-gap: 8%;
+  width: 92%;
+}
+
+.productCard {
+  margin: 0.4%;
+}
+
+.productCard img {
+  width: 100%;
+}
+.productCard h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 120%;
+}
+.productCard-info {
+  display: flex;
+  margin-top: 24px;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+@media screen and (max-width: 768px) {
+  .relatedProductsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .productCard h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    font-size: 100%;
+  }
+}

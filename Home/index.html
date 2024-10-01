@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Threads</title>
+    <link rel="icon" href="../Products/images/webLogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../Home/Header.css">
+    <link rel="stylesheet" href="../Home/Home.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nav: '#402536',
+                        textColor: '#26262C',
+                    },
+                    fontFamily: {
+                        avenir: ['AvenirNext LT Pro Regular', 'sans-serif'],
+                        poppins: ['Poppins', 'serif'],
+                        copper: ['Copperplate Gothic Bold', 'monospace'],
+                        tenor: ['Tenor Sans'],
+                        kaivalya: ['Kaivalya'],
+                        lovelyn: ['Lovelyn'],
+                        vonique: ['Vonique 64', 'sans-serif'],
+                        henri: ['Henri Didot', 'sans-serif'],
+                        bookman: ['Bookman Old Style', 'serif'],
+                        impact: ['Impact'],
+                    },
+
+                }
+            }
+        }
+    </script>
+    <style>
+        @media (max-width: 768px) {
+
+
+            .headerContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            #logoContainer {
+                margin-top: 20px;
+                transform: translateX(-2px);
+                margin-bottom: 20px;
+            }
+
+            #cultureEventContainer {
+                margin-top: 10px;
+                display: flex;
+                transform: translateX(-30px);
+                justify-content: center;
+                align-items: center;
+            }
+
+            #linksContainer {
+                margin-bottom: 10px;
+            }
+
+            /*
+
+            .headerLeft,
+            .headerRight {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+
+            .headerCenter {
+                transform: translateX(200px);
+                margin-bottom: 10px;
+            }
+
+            .swiperContainer .swiper-wrapper {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .swiperContainer .swiper-slide {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+
+            .imageGridContainer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .WomenSectionContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .WomenSectionContainer .grid-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            */
+
+            .collectionContainer {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .swiperContainer .swiper-slide {
+                width: 100%;
+            }
+
+            .imageGridContainer,
+            .collectionContainer {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletterFormContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletterFormInputContainer,
+            .newsletterFormContainer button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .collectionSection #swiperMainHeading {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            #lowerSectionContent {
+                transform: translateY(-100px);
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            #lowerSectionContent {
+                transform: translateY(-200px);
+                font-size: 30px;
+            }
+
+            #upperSectionContent {
+                font-size: 40px;
+                transform: translateY(-100px);
+            }
+
+            #lowerSectionHeader .image-container {
+                transform: translateY(-100px);
+            }
+
+            #lowerSectionHeader .metadata {
+                transform: translateY(-100px);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+            #lowerSectionContent {
+                transform: translateY(-200px);
+                font-size: 30px;
+            }
+
+            #upperSectionContent {
+                font-size: 40px;
+                transform: translateY(-100px);
+            }
+
+            #lowerSectionHeader .image-container {
+                transform: translateY(-100px);
+            }
+
+            #lowerSectionHeader .metadata {
+                transform: translateY(-100px);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+            #lowerSectionContent {
+                transform: translateY(-300px);
+                font-size: 30px;
+            }
+
+            #upperSectionContent {
+                font-size: 40px;
+                transform: translateY(-200px);
+            }
+
+            #upperSectionHeader .image-container {
+                transform: translateY(-100px);
+            }
+
+            #upperSectionHeader .metadata {
+                transform: translateY(-100px);
+            }
+
+
+            #lowerSectionHeader .image-container {
+                transform: translateY(-200px);
+            }
+
+            #lowerSectionHeader .metadata {
+                transform: translateY(-200px);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <div class="headerContainer">
+                <div class="headerLeft">
+                    <ul class="flex" id="cultureEventContainer">
+                        <li class="cultureShow"><i class="fa-solid fa-globe"></i></li>
+                        <li class="eventShow">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headerCenter translate-x-[70px] h-[100px] w-[200px] flex items-center justify-center"
+                    id="logoContainer">
+                    <a href="../Home/index.html" class="cursor-pointer w-[200px] h-[100px]">
+                        <img src="../Home/images/logo.png" class="w-full h-full object-cover " />
+                    </a>
+                </div>
+                <div class="headerRight" id="linksContainer">
+                    <a href="../Search/search.html">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </a>
+                    <a href="../Login/login.html">
+                        <button><i class="fa-regular fa-user"></i></button>
+                    </a>
+                    <a href="../Products/product.html">
+                        <button><i class="fa-solid fa-cart-shopping"></i></button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="shopByCultureContainer">
+            <div class="shopByCulture commonNav"></div>
+            <div class="shopByEvent commonNav"></div>
+        </div>
+    </div>
+
+
+    <section class="section max-[900px]:hidden bg-[#eee3d6] page-header full-width">
+        <div class="container title text-left flex items-center justify-center gap-10">
+            <div class="flex flex-col items-center gap-2">
+                <div class="bg-black w-[200px] h-1"></div>
+                <div class="bg-black w-[200px] h-1"></div>
+            </div>
+            <div>
+
+                <h1 id="animatedTitle" style="letter-spacing: 0px;"
+                    class="animated-title marker text-[70px] text-left ">
+                    Heritage Threads
+                </h1>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <div class="bg-black w-[200px] h-1"></div>
+                <div class="bg-black w-[200px] h-1"></div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="section bg-[#eee3d6] text-[#5c4738]" id="upperSection">
+        <div class="container full-width">
+            <div class="section-header" id="upperSectionHeader">
+                <div class="image-container">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/indian-fashion-designers-1605211357.jpg"
+                        class="brightness-75" alt="Image">
+                </div>
+                <div class="metadata">
+                    <h2 class="tracking-widest max-[700px]:text-2xl text-4xl">CELEBRATE HERITAGE</h2>
+                    <p>A journey through India's rich textile traditions</p>
+                </div>
+            </div>
+            <div class="content" id="upperSectionContent">
+                <p><span class="indent"><span class="caps">Indian fashion</span> is more than just clothing. It
+                        reflects centuries of tradition, culture, and artistry.</span> Each piece is a story woven into
+                    the fabric, celebrating India's diverse heritage. <span class="indent serif">Discover the
+                        elegance of traditional attire and how it continues to inspire modern fashion.</span></p>
+
+                <h3>Exploring Traditional Textiles</h3>
+
+                <p>Understanding the significance of different textiles is key to appreciating Indian fashion.
+                    Fabrics like silk, cotton, and wool have unique cultural meanings and uses. <strong>These
+                        materials not only tell the story of the region they come from but also highlight the skills of
+                        the artisans.</strong></p>
+
+                <p><span class="indent serif"><span class="caps">Every textile</span> has a tale to tell, whether it's
+                        the intricate
+                        weaves of Banarasi silk or the vibrant hues of Rajasthani cotton. </span><strong class="indent">
+                        Each thread represents a piece of India's cultural mosaic.</strong> Embrace these traditions
+                    and the beauty they bring to the world of fashion.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-[#eee3d6] text-[#5c4738]" id="lowerSection">
+        <div class="container full-width">
+            <div class="section-header" id="lowerSectionHeader">
+                <div class="image-container">
+                    <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2021/09/09162055/r11_3-1600x704.jpg"
+                        class="brightness-75" alt="Image">
+                </div>
+                <div class="metadata">
+                    <h2 class="tracking-widest max-[700px]:text-2xl text-4xl">Celebrate Culture</h2>
+                    <p>Crafting Legacy Through Fashion</p>
+                </div>
+            </div>
+            <div class="content" id="lowerSectionContent">
+                <p>Every piece in our collection is a tribute to India's rich cultural heritage, blending
+                    traditional craftsmanship with contemporary design. <strong>Experience the elegance of
+                        handcrafted attire and celebrate the artisans who make it possible.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative">
+        <video src="../Home/images/intro.mp4" autoplay loop muted playsinline
+            class="w-full h-[90vh] object-cover object-center">
+            <source src="../Home/images/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+            <div id="mainHeading"
+                class="text-white text-4xl md:text-6xl font-bold text-center tracking-wider opacity-0">
+                <div class="w-[500px] h-[200px]  flex flex-col gap-10 justify-center items-center">
+                    <span
+                        class="block text-white text-4xl md:text-[80px] font-bold text-center tracking-wider">HERITAGE</span>
+                    <span
+                        class="block text-white text-4xl md:text-[80px] font-bold text-center tracking-wider">THREADS</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="swiperContainer">
+        <div class="swiperHr"></div>
+        <div class="swiperHeading">
+            <h1 class="swiperHeadingText" id="swiperMainHeading">NEW ARRIVAL SHIRTS</h1>
+            <h1 class="swiperHeadingText">Discover the latest styles and trends</h1>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://assets0.mirraw.com/images/12415408/2668581_1_long_webp.webp?1714056375">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://i.pinimg.com/736x/75/59/fd/7559fd05d781abb5e8405d2c08358988.jpg">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://i.pinimg.com/474x/2d/b1/e7/2db1e733dc7d15708b50c0bae956299b.jpg">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://i.pinimg.com/736x/df/17/6e/df176e7c6f445e165d72954413795bc1.jpg" alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://www.chirosbyjigyasa.com/cdn/shop/products/kessi-lymi-vintage-muslin-kurti-9230.jpg?v=1594580734"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://assets0.mirraw.com/images/9751387/103-Purple-1_long_webp.webp?1688216758"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://cdn.shopify.com/s/files/1/2260/2507/files/unnamed_f1dae263-89e3-4265-a68a-44bf7ca8af4d_600x600.jpg?v=1631407207"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://www.hatkay.com/cdn/shop/files/Indian_Ethnic_Wear-inner.jpg?v=1656132069"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://www.hatkay.com/cdn/shop/files/Indian_Ethnic_Wear-inner.jpg?v=1656132069">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img
+                                src="https://media.nihalfashions.com/blog/wp-content/uploads/Modern-Trends-Influencing-Indian-Mens-Fashion-Choices.jpg">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://i.pinimg.com/736x/44/14/f4/4414f4deea4002a5ae3fa8bda8705d24.jpg">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://media.list.ly/production/291147/1830749/item1830749_600px.jpeg?ver=7255795432"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://th.bing.com/th/id/OIP.6HGi6eWRY7IIL4p1vv_MhwAAAA?w=270&h=405&rs=1&pid=ImgDetMain"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://th.bing.com/th/id/OIP.KtScE4sBWBQub7AKnGVryQHaLF?w=684&h=1024&rs=1&pid=ImgDetMain"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://th.bing.com/th/id/OIP.QyGhx3s0Go4gAEF1EoxFhAHaLH?rs=1&pid=ImgDetMain"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="newContainer">
+                        <div class="innerContainer">
+                            <img src="https://th.bing.com/th/id/OIP.XqUvGa9WrGstgnZOpkxgVQHaLH?rs=1&pid=ImgDetMain"
+                                alt="">
+                        </div>
+                        <div>WHITE SUBTLE SHEEN SUIT</div>
+                        <p>Product Description</p>
+                        <p>Available Sizes : 38</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-2 hover-slide-right">
+                <span>VIEW ALL</span>
+            </button>
+        </div>
+    </section>
+
+
+    <section class="imageSection" style="padding-top: 20px; padding-bottom: 50px;">
+        <div class="swiperHeading" style="margin-bottom: 40px;">
+            <h1 class="swiperHeadingText" style="letter-spacing: 5px;" id="swiperMainHeading">
+                <span style="font-family: 'Open Sans', sans-serif; font-weight: 200;  margin-top: 20px;">HERITAGE
+                    COLLECTION FOR KINGS
+                </span>
+            </h1>
+            <h1 class="swiperHeadingText tracking-wider">
+                Explore our exclusive collection of heritage suits
+            </h1>
+        </div>
+        <div class="imageGridContainer" style="font-family: 'Hendri Didot', Times, serif;">
+            <div class="grid-item">
+                <img src="https://ethnicity.in/cdn/shop/files/MTLK00111ONIONPINK_1_2048x.jpg?v=1715411943"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        SHIRTS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW ALL</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="https://i.pinimg.com/736x/98/1b/80/981b80b039fb4a1f1112ff3b8d46c207.jpg" class="gridImage"
+                    alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        SUITS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://img.tatacliq.com/images/i16//437Wx649H/MP000000021610366_437Wx649H_202403191727221.jpeg"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        BLAZERS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.kalkifashion.com/blogs/wp-content/uploads/2024/01/Elegance_Across_Borders_Embracing_Indian_Ethnic_Wear_in_Canada.jpg"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        PANTS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.pinimg.com/564x/e3/12/bf/e312bfdcb0c6cbefb3517608d3d94ed0.jpg" class="gridImage"
+                    alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        WAISTCOATS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://res.cloudinary.com/purnesh/image/upload/f_auto/v1693293274/131693293273068.jpg"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        T-SHIRTS
+
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://mehakboutique.com/cdn/shop/files/groom-sherwani-2806_d3239cd5-80aa-4731-a207-ae62453e9d42_1024x1024@2x.jpg?v=1723013779"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://i.pinimg.com/736x/d9/c8/b1/d9c8b191265c1c119ec9c1e3602503a7.jpg" class="gridImage"
+                    alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        BOXERS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="https://static.wixstatic.com/media/fef19b_f6e311acea8c43868064cb720157628e~mv2.png/v1/crop/x_2,y_0,w_1998,h_2613/fill/w_560,h_732,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/fef19b_f6e311acea8c43868064cb720157628e~mv2.png"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        SHORTS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newsletterSection">
+        <div class="swiperHr" style="margin-top: 40px;"></div>
+        <div class="newsletterContainer">
+            <h1 class="newsletterHeading">
+                NEWSLETTER
+            </h1>
+            <p class="newsletterText max-[480px]:hidden">
+                Sign up to our newsletter to receive exclusive offers.
+            </p>
+            <div class="newsletterFormContainer">
+                <div class="newsletterFormInputContainer"><input type="text" placeholder="E-mail"></div>
+                <div>
+                    <button class="btn btn-2 hover-slide-right" style="width: 300px;">
+                        <span>SUBSCRIBE</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="swiperHr" style="margin-top: 40px;"></div>
+    </section>
+
+    <section class="WomenSection pt-10"
+        style="font-family: 'Open Sans', sans-serif; background-color: black; color: white; margin-bottom: 0px;">
+        <div class="swiperHeading" style="margin-bottom: 40px;">
+            <h1 class="swiperHeadingText" style="letter-spacing: 5px;" id="swiperMainHeading">
+                <span style="font-family: 'Open Sans', sans-serif; font-weight: 200;  margin-top: 20px;">WOMEN'S
+                    COLLECTION</span>
+            </h1>
+            <h1 class="swiperHeadingText tracking-wider">
+                Explore our exclusive collection of heritage Sarees
+            </h1>
+        </div>
+        <div class="WomenSectionContainer" style="margin:50px 50px;">
+            <div class="grid-item" id="women1">
+                <img src="https://www.libasco.com/product_images/uploaded_images/3l.jpg" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        SARRES
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item" id="women2">
+                <img src="https://www.inddus.in/cdn/shop/products/floral-embroidered-fit-flare-maxi-ethnic-dress-with-dupatta-308735.jpg?v=1696663063"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        STYLISH
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item" id="women3">
+                <img src="https://asianpartywear.com/cdn/shop/products/13912570_1827567694141430_2323820803583705994_n.jpg?v=1612931624"
+                    class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        DRESSES
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="collectionSection mt-10" style="font-family: 'Open Sans', sans-serif;">
+        <div class="swiperHeading" style="margin-bottom: 40px;">
+            <h1 class="swiperHeadingText" style="letter-spacing: 5px;" id="swiperMainHeading">
+                <span style="font-family: 'Open Sans', sans-serif; font-weight: 200;  margin-top: 20px;">HERITAGE
+                    COLLECTION
+                </span>
+            </h1>
+            <h1 class="swiperHeadingText tracking-wider">
+                Embrace Timeless Elegance and Global Tradition
+            </h1>
+        </div>
+        <div class="collectionContainer" style="margin : 50px 50px;">
+            <div class="grid-item">
+                <img src="../Home/images/13.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        BLACK SUITS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/14.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        BRIGHT WHITES
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/15.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        DESIGNER SHIRTS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/16.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        DESIGNER SUITS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/17.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        PRINTED SHIRTS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/18.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JACQUARD LUXURY
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/19.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/20.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/21.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/22.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/23.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../Home/images/24.webp" class="gridImage" alt="">
+                <div class="btnContainer">
+                    <h1 class="gridImageHeading">
+                        JEANS
+                    </h1>
+                    <button class="btn btn-3 hover-slide-right">
+                        <span>VIEW MORE</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SUBSCRIPTION CARDS TO MAGAZINES -->
+    <section class="bg-[url('../Home/images/cardBack.jpg')] mb-3 py-[40px] ">
+        <div class="swiperHeading" style="margin-bottom: 40px;">
+            <h1 class="swiperHeadingText" style="letter-spacing: 5px;" id="swiperMainHeading">
+                <span
+                    style="font-family: 'Open Sans', sans-serif; font-weight: 200; font-size: 50px; color: whitesmoke">
+                    SUBSCRIBE</span>
+            </h1>
+            <h1 class="swiperHeadingText" style="color: whitesmoke ; letter-spacing : 1px">
+                "Embrace Tradition and Style with Our Magazine."
+            </h1>
+        </div>
+        <div class="flex justify-center flex-col gap-10 items-center h-full w-full">
+            <div class="flex justify-center items-center gap-10">
+                <div
+                    class="flex justify-center items-center gap-10 max-[1200px]:flex-col max-[600px]:translate-x-[0px]">
+                    <div class="rounded-xl w-[368px] text-white border-3 border-white px-[28px] py-[24px] h-[406px] bg-[#212327]"
+                        id="card1">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-center">
+                                <div class="text-[22px] text-white">Monthly</div>
+                                <div id="circle1"
+                                    class="border-2 border-gray-600 bg-black w-[20px] h-[20px] rounded-full">
+                                    <i id="check1"
+                                        class="hidden absolute fa-sharp fa-solid fa-lg fa-circle-check translate-x-[-1.2px] translate-y-[9px]"
+                                        style="color: #E0218A;"></i>
+                                </div>
+                            </div>
+                            <div class="text-[14px] flex flex-col gap-[-2px] tracking-wide">
+                                <div class="tracking-wide"><span
+                                        class="tracking-wider text-[40px] font-henri font-bold">&#8377;215.87</span>/
+                                    month
+                                </div>
+                                <div class="translate-y-[-4px]">
+                                    <span class="font-henri tracking-widest">
+                                        &#8377;2,590.48
+                                    </span>
+                                    billed annually
+                                    <span class="text-green-200 p-[2px] text-[12px] font-bold bg-[#072314] rounded-md">
+                                        SAVE 11%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="text-[15px] mt-1 flex flex-col tracking-wide">
+                                <ul class="list-disc list-inside flex flex-col gap-[5px]">
+                                    <li>Exclusive fashion features</li>
+                                    <li>Interviews with designers</li>
+                                    <li>Trend forecasts</li>
+                                    <li>Style tips</li>
+                                    <li>Cultural highlights</li>
+                                    <li>Ethnic wear showcases</li>
+                                    <li>Behind-the-scenes stories</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl w-[368px] text-white border-2 border-transparent px-[28px] py-[24px] h-[406px] bg-[#212327]"
+                        id="card2">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-center">
+                                <div class="text-[22px] text-white">Yearly</div>
+                                <div id="circle2"
+                                    class="border-2 border-gray-600 bg-black w-[20px] h-[20px] rounded-full">
+                                    <i id="check2"
+                                        class=" hidden absolute fa-sharp fa-solid fa-lg fa-circle-check translate-x-[-1.2px] translate-y-[9px]"
+                                        style="color: #E0218A;"></i>
+                                </div>
+                            </div>
+                            <div class="text-[14px] flex flex-col gap-[-2px] tracking-wide">
+                                <div class="tracking-wide"><span
+                                        class="tracking-wider text-[40px] font-henri font-bold">&#8377;2,590.48</span>/
+                                    year
+                                </div>
+                                <div class="translate-y-[-4px]">
+                                    <span class="font-henri tracking-widest">
+                                        &#8377;2,590.48
+                                    </span>
+                                    billed annually
+                                    <span class="text-green-200 p-[2px] text-[12px] font-bold bg-[#072314] rounded-md">
+                                        SAVE 11%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="text-[15px] mt-1 flex flex-col tracking-wide">
+                                <ul class="list-disc list-inside flex flex-col gap-[5px]">
+                                    <li>Exclusive fashion features</li>
+                                    <li>Interviews with designers</li>
+                                    <li>Trend forecasts</li>
+                                    <li>Style tips</li>
+                                    <li>Cultural highlights</li>
+                                    <li>Ethnic wear showcases</li>
+                                    <li>Behind-the-scenes stories</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl w-[368px] text-white border-2 border-transparent px-[28px] py-[24px] h-[406px] bg-[#212327]"
+                        id="card3">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-center">
+                                <div class="text-[22px] text-white">Premium</div>
+                                <div id="circle3"
+                                    class="border-2 border-gray-600 bg-black w-[20px] h-[20px] rounded-full">
+                                    <i id="check3"
+                                        class="hidden absolute fa-sharp fa-solid fa-lg fa-circle-check translate-x-[-1.2px] translate-y-[9px]"
+                                        style="color: #E0218A;"></i>
+                                </div>
+                            </div>
+                            <div class="text-[14px] flex flex-col gap-[-2px] tracking-wide">
+                                <div class="tracking-wide"><span
+                                        class="tracking-wider text-[40px] font-henri font-bold">&#8377;1,000.00</span>/
+                                    month
+                                </div>
+                                <div class="translate-y-[-4px]">
+                                    <span class="font-henri tracking-widest">
+                                        &#8377;12,000.00
+                                    </span>
+                                    billed annually
+                                    <span class="text-green-200 p-[2px] text-[12px] font-bold bg-[#072314] rounded-md">
+                                        SAVE 20%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="text-[15px] mt-1 flex flex-col tracking-wide">
+                                <ul class="list-disc list-inside flex flex-col gap-[5px]">
+                                    <li>All Basic features</li>
+                                    <li>Exclusive interviews with celebrities</li>
+                                    <li>Special fashion events coverage</li>
+                                    <li>Early access to new editions</li>
+                                    <li>Personalized style recommendations</li>
+                                    <li>Special discounts on ethnic wear</li>
+                                    <li>Priority customer support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer  -->
+    <footer class="font-tenor w-full mt-[-12px]" style="font-family: 'Open Sans', sans-serif;">
+        <div class="w-full relative text-center text-black">
+            <img src="../Home/images/newFooter.jpg" class="h-[300px] w-full object-cover" alt="">
+            <div class="absolute inset-0 flex justify-evenly items-center p-4 space-x-4">
+                <div class="text-left text-xs sm:text-sm md:text-base">
+                    <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">About Us</div>
+                    <ul class="footerList font-tenor">
+                        <li>Our Tale</li>
+                        <li>Our Stories</li>
+                        <li>Terms and Conditions</li>
+                        <li>We Care</li>
+                    </ul>
+                </div>
+                <div class=" text-left text-xs sm:text-sm md:text-base">
+                    <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Policies</div>
+                    <ul class="footerList font-tenor">
+                        <li>Return Policy</li>
+                        <li>Privacy </li>
+                        <li>Cancellation </li>
+                        <li>Refund </li>
+                    </ul>
+                </div>
+                <div class="text-left text-xs sm:text-sm md:text-base">
+                    <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Customer Services</div>
+                    <ul class="footerList font-tenor">
+                        <li>Payment Policy</li>
+                        <li>Shipping &amp; Policy</li>
+                        <li>Track your order / Return</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="max-[700px]:hidden text-left text-xs sm:text-sm md:text-base">
+                    <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Contact Us</div>
+                    <ul class="footerList font-tenor">
+                        <li>Customer Care: +91 0123456789</li>
+                        <li>Service Email: sharewithus@ht.in</li>
+                        <li>Legal: compliance@nexo.com</li>
+                        <li>Franchise Enquiry</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="absolute bottom-12  w-11/12 h-[1px] bg-gray-900 left-1/2 transform -translate-x-1/2"></div>
+            <div class="absolute bottom-5 inset-x-0 flex justify-center space-x-3">
+                <i class="fa-brands cursor-pointer fa-square-facebook fa-lg sm:fa-xl social-icon"
+                    style="color: #402536;"></i>
+                <i class="fa-brands cursor-pointer fa-square-instagram fa-lg sm:fa-xl ml-3 social-icon"
+                    style="color: #402536;"></i>
+            </div>
+            <div class="absolute mt-2 inset-x-0">
+                <p class="text-center text-xs sm:text-sm md:text-base mb-2 font-tenor">Copyright © 2024 Heritage Threads
+                    | Country
+                    of Origin: India</p>
+            </div>
+        </div>
+        <div class="w-full">
+            <img src="../Home/images/footer.webp" class="w-full h-[400px] object-cover" alt="">
+        </div>
+    </footer>
+
+
+</body>
+
+<!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 26,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            1000: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            }
+        }
+    });
+</script>
+<script src="../Home/Header.js"></script>
+
+<!-- CDN LINKS FOR GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+<!-- SCRIPT FOR HOME.JS  -->
+<script src="../Home/Home.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 26,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            1000: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+    });
+</script>
+
+</html>

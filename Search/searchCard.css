@@ -1,0 +1,172 @@
+.searchCard {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  margin-top: -20px;
+  margin-right: 5px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  gap: 0.8rem;
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0.2rem;
+  }
+  img:hover{
+    transition: all 0.3s ease;
+    overflow: hidden;
+    transform: scale(1.02);
+  }
+  .cardTitle {
+    font-size: 100%;
+    text-align: center;
+  }
+  .cardPrice {
+    font-size: 124%;
+  }
+  button {
+    width: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.1rem;
+    transition: 0.4s ease-in-out;
+  }
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+
+.swiperHeading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Henri Didot', sans-serif;
+  justify-content: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.2em;
+}
+#swiperMainHeading{
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.swiperHeadingText{
+  font-size: 24px;
+  font-weight: 500;
+}       
+.swiperContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.swiper {
+  width: 100%;
+  font-family: 'Henri Didot';
+  letter-spacing: 0.1em;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper {
+  margin-top: 10px;
+  overflow: hidden;
+  width: 90%;
+  height: 350px;
+}
+
+.newContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerContainer {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.innerContainer img {
+  cursor: pointer;
+  width: full;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.innerContainer img:hover {
+  transform: scale(1.05);
+}
+.swiperHr{
+  margin-top: 20px;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(170, 165, 165);
+  margin-bottom: 20px;
+}
+
+.newContainer div:nth-child(2) {
+  width: full;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.newContainer p {
+  color: grey;
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: center;
+  width: 100%;
+}
+
+.newContainer p:nth-child(4) {
+  transform: translateY(-2px);
+}
+
+.newContainer div:nth-child(2) {
+  margin-bottom: 4px;
+}
+
+#browsingHistory .innerContainer{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+
+}
+#browsingHistory {
+  margin-top: -10px;
+}
+#browsingHistory .mySwiper{
+  height: 280px;
+}

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="search.css" />
+  <link rel="stylesheet" href="searchCard.css" />
+  <script src="https://kit.fontawesome.com/1b2855684f.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nav: '#402536',
+            textColor: '#26262C',
+          },
+          fontFamily: {
+            avenir: ['AvenirNext LT Pro Regular', 'sans-serif'],
+            poppins: ['Poppins', 'serif'],
+            copper: ['Copperplate Gothic Bold', 'monospace'],
+            tenor: ['Tenor Sans'],
+            kaivalya: ['Kaivalya'],
+            lovelyn: ['Lovelyn'],
+            vonique: ['Vonique 64', 'sans-serif'],
+            henri: ['Henri Didot', 'sans-serif'], // Add your custom font here
+            bookman: ['Bookman Old Style', 'serif'],
+            impact: ['Impact'],
+            'machina': ['"Neue Machina"', 'sans-serif'],
+            'jost': ['"Jost"', 'sans-serif'],
+            'Lovelyn': ['"Lovelyn"', 'sans-serif'],
+            'Google': ['"Product Sans"', 'sans-serif'],
+          },
+
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="font-tenor">
+    <!-- navbar advertisement -->
+    <div class="navbar w-full h-14 bg-nav text-white flex items-center justify-center overflow-hidden">
+      <div class="navbarText overflow-hidden text-center text-xs sm:text-sm md:text-base">
+        Free Shipping applicable on orders above Rs 1699 &nbsp; &nbsp; &nbsp; <span class="max-[947px]:hidden">
+          | &nbsp; &nbsp; &nbsp; Standard
+          return fee of Rs 99 applicable on every item returned
+        </span>
+      </div>
+    </div>
+    <!-- navbar -->
+    <div class="logo flex flex-col lg:flex-row justify-evenly items-center">
+      <div class="logo-icons w-full lg:w-5/6 flex items-center mt-2 justify-center">
+        <a href="../Home/index.html">
+          <img src="images/logo.png" alt=""
+            class="w-[150px] h-[90px] lg:w-[200px] lg:h-[120px] translate-x-0 lg:translate-x-[120px]">
+        </a>
+      </div>
+      <div
+        class="icons mb-2 mt-4 lg:mt-10 gap-3 flex justify-center lg:flex space-x-4 lg:space-x-0 max-[1200px]:mt-10 mr-2">
+        <i
+          class="fa-sharp fa-solid fa-envelope fa-lg hover:text-[#4045d9] transition-colors duration-300 cursor-pointer"></i>
+        <i
+          class="fa-sharp fa-solid fa-user fa-lg hover:text-[#0d87b3] transition-colors duration-300 cursor-pointer"></i>
+        <i
+          class="fa-regular fa-heart fa-lg text-[#d940cc] hover:text-[#402536] transition-colors duration-300 cursor-pointer"></i>
+        <i
+          class="fa-sharp fa-solid fa-magnifying-glass fa-lg hover:text-[#210854] transition-colors duration-300 cursor-pointer"></i>
+        <i
+          class="fa-sharp fa-solid fa-bag-shopping fa-lg hover:text-[#c5de08] transition-colors duration-300 cursor-pointer"></i>
+      </div>
+    </div>
+    <div class="subNavbar h-auto p-3 text-textColor">
+      <div
+        class="items w-full text-xs sm:text-sm lg:text-[13px] font-bold flex flex-col lg:flex-row items-center justify-center lg:justify-evenly space-y-2 lg:space-y-1">
+        <ul
+          class="newUL flex flex-wrap gap-4 lg:gap-11 justify-center lg:justify-start listItems max-[947px]:gap-5 max-[947px]:mt-3">
+          <li class="dropdownList">
+            <a class="hover:scale-110 duration-300">MENS WEAR</a>
+            <ul class="dropdown hidden lg:block">
+              <li class="z-[9900]"><a href="">Kurtas</a></li>
+              <li class="z-[9000]"><a href="">Kurtas Set</a></li>
+              <li class="z-[9000]"><a href="">Mens Shirt</a></li>
+              <li class="z-[9000]"><a href="">Mens Pants</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="dropdownList">
+            <a class="hover:scale-110 duration-300">WOMENS WEAR</a>
+            <ul class="dropdown hidden lg:block">
+              <li><a href="">Kurtis &amp; Sarrees</a></li>
+              <li><a href="">Dresses</a></li>
+              <li><a href="">Tops and Tunics</a></li>
+              <li><a href="">Bottom Wear</a></li>
+              <li><a href="">Summer Wear</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">ASSESSA</li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">NYALANGAN</li>
+          <li>|</li>
+          <li class="text-red-800 hover:scale-110 duration-300" id="uptoDiscount">UPTO 70% OFF</li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">OUR STORIES</li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">VIEW ALL</li>
+          <li>|</li>
+          <li class=" hover:scale-110 duration-300">RETURN</li>
+        </ul>
+      </div>
+      <hr class="h-1 mt-4 mb-2 bg-textColor">
+    </div>
+  </nav>
+
+  <!-- TITLE AND IMAGE -->
+  <div class="mt-[4rem] mb-[4rem]">
+    <div class="container1 z-[-1]">
+      <div class="w-full h-[300px] relative">
+        <img src="images/image.png" class="w-full z-[-1] h-full object-cover" alt="">
+      </div>
+      <div class="title font-henri text-white flex flex-col font-bold text-[20px]">
+        <span class="text-[50px] tracking-widest">
+          "EMBROIDED SAREES"
+        </span>
+        <div class="flex justify-center items-center gap-2">
+          <div class="flex flex-col gap-2">
+            <div class="w-[80px] h-[1px] bg-white"></div>
+            <div class="w-[80px] h-[1px] bg-white"></div>
+          </div>
+          <div class="text-[15px] tracking-widest">SHOWING ALL SEARCH RESULTS</div>
+          <div class="flex flex-col gap-2">
+            <div class="w-[80px] h-[1px] bg-white"></div>
+            <div class="w-[80px] h-[1px] bg-white"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTAINER 2 FILTERS AND SEARCH RESULTS -->
+    <div class="container2">
+      <div class="filters ml-5 mt-[130px] ">
+        <ul>
+          <li class="filterDiv">
+            <div style="font-weight : 600; border-bottom: 1px solid black;">
+              GENDER
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="filterDivInfo ">
+              <ul class="filterDivInfoUL">
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="male" /><label for="male">Male</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="female" /><label for="female">Female</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="others" /><label for="others">Others</label></li>
+                <li><input type="checkbox" class="mr-2 mt-[5px]" />Neutral</li>
+              </ul>
+            </div>
+          </li>
+          <li class="filterDiv">
+            <div style="font-weight:600; border-bottom: 1px solid black;">
+              PRICE
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="filterDivInfo">
+              <ul>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="under1000" /><label for="under1000">Under 1000</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="under2500" /><label for="under2500">Under 2500</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="above2500" /><label for="above2500">Above 2500</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="under5000" /><label for="under5000">Under 5000</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="under1000_2" /><label for="under1000_2">Under 1000</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="above20000" /><label for="above20000">Above 20000</label></li>
+              </ul>
+            </div>
+          </li>
+          <li class="filterDiv">
+            <div style="font-weight : 600; border-bottom: 1px solid black;">
+              DISCOUNT
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="filterDivInfo">
+              <ul>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="upto30" /><label for="upto30">Upto 30% off</label></li>
+                <li class="cursor-pointer flex items-center"><input type="checkbox" class="mr-2 mt-[6px]"
+                    id="upto50" /><label for="upto50">Upto 50% off</label></li>
+              </ul>
+            </div>
+          </li>
+          <li class="filterDiv">
+            <div style="font-weight : 600; border-bottom: 1px solid black;">
+              COLORS
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="filterDivInfo">
+              <ul>
+                <li style="display: flex; gap: 5px; margin-top: 6px">
+                  <div style="
+                        width: 32px;
+                        height: 32px;
+                        background-color: darkgreen;
+                        border-radius: 50%;
+                        cursor: pointer;
+                      "></div>
+                  <div style="
+                        width: 32px;
+                        height: 32px;
+                        background-color: rebeccapurple;
+                        border-radius: 50%;
+                        cursor: pointer;
+                      "></div>
+                  <div style="
+                        width: 32px;
+                        height: 32px;
+                        background-color: rgb(226, 17, 153);
+                        border-radius: 50%;
+                        cursor: pointer;
+                      "></div>
+                  <div style="
+                        width: 32px;
+                        height: 32px;
+                        background-color: rgb(245, 201, 8);
+                        border-radius: 50%;
+                        cursor: pointer;
+                      "></div>
+                  <div style="
+                        width: 32px;
+                        height: 32px;
+                        background-color: black;
+                        border-radius: 50%;
+                        cursor: pointer;
+                      "></div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+      <div class="searchResults mr-[30px] ">
+        <div class="sortBy">
+          <select name="" id="">
+            <option value="">Relevancy</option>
+            <option value="">Best selling</option>
+            <option value="">A to Z</option>
+            <option value="">Z to A</option>
+            <option value="">Price : Ascending</option>
+            <option value="">Price : Descending</option>
+          </select>
+        </div>
+        <div class="searchResultCards"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOMIZE SECTION -->
+  <section class="w-full mt-10 pt-10 pb-20 mb-10 bg-[#FAF6EF] gap-[70px] flex-col flex items-center justify-center">
+    <div
+      class="font-Google text-[50px] max-[1400px]:text-[40px] max-[1104px]:text-[30px] max-[830px]:text-center max-[830px]:font-bold">
+      <div>DESIGN AND SELL CLOTHES WITH HERITAGE THREADS</div>
+    </div>
+    <div class="flex w-[90%] flex-col gap-20 max-[600px]:gap-10 items-center justify-center">
+      <div class="flex items-center justify-center gap-10 max-[1100px]:flex-col">
+        <div class="flex w-[70%] gap-5 flex-col items-left justify-center">
+          <div class="font-machina text-[30px] max-[1200px]:text-[20px] max-[728px]:text-center">
+            Heritage Threads's intuitive clothing desgin
+          </div>
+          <div class="font-jost text-[21px] max-[1200px]:text-[17px] max-[728px]:text-justify">
+            Access our design tool and upload your artwork or graphics to bring your creations to life. Customize your
+            clothing items by adding your designs and arranging them as desired.
+            Designing clothes online has now become an effortless endeavor!</div>
+          <div class="max-[728px]:text-center">
+            <button class="bg-black border-2  border-black text-white px-4 py-2 hover:bg-white hover:text-black">Start
+              Designing</button>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://a.storyblok.com/f/165154/1280x720/c1423d9a0e/personalization-studio-1280x720-newsroom-article.gif/m/">
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-10 max-[1100px]:flex-col-reverse">
+        <div>
+          <img
+            src="https://a.storyblok.com/f/165154/1280x720/ba68a24f28/0341_2024-brand-vi-rollout-dedicated-migration-support-1.png/m/1000x0/">
+        </div>
+        <div class="flex w-[70%] gap-5 flex-col items-left justify-center">
+          <div class="font-machina text-[30px] max-[1200px]:text-[20px] max-[728px]:text-center">
+            Design tools and features
+          </div>
+          <div class="font-jost text-[21px] max-[1200px]:text-[17px] max-[728px]:text-justify">
+            Experiment with different color options, fonts, and placement choices to create unique and eye-catching
+            designs that reflect your brand's identity. You don’t need third-party software to design clothes to sell,
+            as you get all the essential editing tools within Heritage Threads eco-system.</div>
+          <div class="max-[728px]:text-center">
+            <button class="bg-black border-2 border-black text-white px-4 py-2 hover:bg-white hover:text-black">Start
+              Designing</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-10 max-[1100px]:flex-col">
+        <div class="flex w-[70%] gap-5 flex-col items-left justify-center">
+          <div class="font-machina text-[30px] max-[1200px]:text-[20px] max-[728px]:text-center">Preview and tweak
+            designs in minutes</div>
+          <div class="font-jost text-[21px] max-[1200px]:text-[17px] max-[728px]:text-justify">Take advantage of our
+            preview feature when designing clothes
+            online to see how your designs will look on your chosen clothing items.
+
+            Make any necessary adjustments to ensure your designs match your vision.</div>
+          <div class="max-[728px]:text-center">
+            <button class="bg-black border-2 border-black text-white px-4 py-2 hover:bg-white hover:text-black">Start
+              Designing</button>
+          </div>
+        </div>
+        <div class="border-[4px] border-black p-2">
+          <img
+            src="https://a.storyblok.com/f/165154/1280x720/5b93101665/0326_personalization-studio-campaign-blog-gif.gif/m/">
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-10 max-[1100px]:flex-col-reverse">
+        <div class="border-[4px] border-black p-2">
+          <img src="https://a.storyblok.com/f/165154/1280x720/f9917c6584/4_sell-on-other-platforms.jpg/m/1000x0/">
+        </div>
+        <div class="flex w-[70%] gap-5 flex-col items-left justify-center">
+          <div class="font-machina text-[30px] max-[1200px]:text-[20px] max-[728px]:text-center">Pair with platforms to
+            sell clothes online</div>
+          <div class="font-jost text-[21px] max-[1200px]:text-[17px] max-[728px]:text-justify">Once your designs are
+            finalized, you can easily showcase your
+            clothing items on various platforms to sell them online.
+
+            To reach potential customers, utilize your website, social media platforms, or online
+            marketplaces.</div>
+          <div class="max-[728px]:text-center">
+            <button class="bg-black border-2 border-black text-white px-4 py-2 hover:bg-white hover:text-black">Start
+              Designing</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ SECTION -->
+  <section class="faq-container  mt-10 mb-20  flex flex-col items-center justify-center gap-10" id="faq">
+    <div class="font-machina text-center text-[48px] max-[676px]:text-[30px] max-[420px]:text-[20px]">Frequently Asked
+      Questions</div>
+    <div class="question-container flex flex-col items-center justify-center gap-2 w-[80%]" id="faqSection">
+      <div
+        class="content-container px-2 py-1 border-2 border-black rounded-sm w-[95%] flex flex-col items-center justify-center">
+        <div class="faq-header flex flex-row w-full items-center justify-between px-2 py-2 cursor-pointer">
+          <div class="text-[18px] font-jost max-[640px]:text-[15px]">How do I start selling clothes online?</div>
+          <span class="open font-bold text-[20px] max-[640px]:text-[15px]">+</span>
+          <span class="close font-bold text-[20px] hidden max-[640px]:text-[15px]">-</span>
+        </div>
+        <div
+          class="content font-jost flex max-[640px]:text-[14px] flex-col items-start justify-center gap-2 px-2 py-2  text-[16px] hidden text-gray-500">
+          <div>To design and sell clothes online, you must first choose a niche, such as vintage clothing, and
+            do some market research. Understand your target audience's preferences and select products
+            accordingly. Next, choose a platform like Gelato to create and sell custom products like
+            apparel, mugs, vintage items, and tote bags. Create product listings and optimize them for SEO.
+            Once you're ready, launch your store and promote your offerings through marketing activities.
+            You can also sell old, unwanted clothes or used clothes that are in good condition. Instead of
+            ending up as fashion waste, these clothes can be sold for a good price, especially if they're
+            from top-selling brands like Louis Vuitton.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="swiperHr"></div>
+
+
+  <!-- SWIPER CONTAINER -->
+  <div class="flex justify-between mt-10 items-center mb-[-10px] ml-20 mr-20 text-left max-[768px]:flex-col">
+    <div>
+      <h1
+        class=" left-0 max-[600px]:text-lg max-[500px]:text-sm max-[768px]:text-center text-left font-bold text-2xl tracking-wider"
+        style="font-family: 'Product Sans';">DISCOVER
+        YOUR NEXT MASTERPIECE
+      </h1>
+      <h1 class="left-0 text-left max-[630px]:hidden " style="font-family: 'Product Sans';">Take a look at our latest
+        products. We have
+        something for everyone</h1>
+    </div>
+    <div class="flex items-center gap-4 max-[900px]:flex-col">
+      <div class="text-sm">Page 1 of 10</div>
+      <button
+        class="bg-black hover:bg-white hover:text-black duration-300 hover:border hover:border-black text-white px-4 py-2 rounded-sm"
+        style="font-family: 'Product Sans';">SHOW MORE
+      </button>
+    </div>
+  </div>
+
+  <!-- DISCOVER MORE -->
+  <section class="swiperContainer">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROpnpYb_D2a4Mk9HS35jbcafjikNVC-aoqRA&s">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">EMBROIDERED KURTAS</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0826/7263/files/Sherwani_King_Maharaja_Sherwani_Style_Embroidered_Royal_Indian_Groom_Design_2024_146.png?v=1707182058">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">MAHARAJA SHERWANI</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img
+                src="https://static.wixstatic.com/media/4594f8_2c7438c7cc574618a9f4fdccfecb70a7~mv2.jpg/v1/fill/w_480,h_662,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4594f8_2c7438c7cc574618a9f4fdccfecb70a7~mv2.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">SILKY MARWARI SAREE</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://img.perniaspopupshop.com/catalog/product/c/h/CHVA052329_1.jpeg?impolicy=listingimagenew"
+                alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">MODERN CAPE LEHENGA</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://i.pinimg.com/736x/da/c0/07/dac00763c017eafd3ec45aab06f4e8cd.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">ASYMMETRICAL ANARKALI</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu4FYayrkvU-ehg19Mhllub1EY2UmDoXRXmg&s"
+                alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">JACKET SUIT KURTA</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://www.shopspringbreak.com/cdn/shop/files/RB7A5586.jpg?v=1684752927&width=1445" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">EMBROIDERED NEHRU JACKET</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://empress-clothing.com/cdn/shop/products/EB1071D_1800x1800.jpg?v=1657606419" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">INDO WESTERN JUMPSUIT</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9diOg5eaKNhmAYmZgWpB6mCGwEVjqBgB_pA&s">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">ANARKALI WITH JEANS</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://saakshakinni.com/wp-content/uploads/2022/03/002.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">EMBROIDERED DENIM JACKETS</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img
+                src="https://rkgshopping.in/cdn/shop/products/indigo-cotton-hand-block-print-saree-with-blouse-saree-rkg-shopping-737979.jpg?v=1689818268">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">INDIGO BLOCK PRINT SET</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQub86D4nvYvgc4QZqsOgf1GD-ipe_q7OwDuA&s"
+                alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">BHANGADALA JACKET</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbW_T_5ShOnHkwloFiMgZr_MyLOsgDan5rQg&s"
+                alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">KURTA WITH CHURIDAR</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://shreeman.in/cdn/shop/products/43.jpg?v=1642909154&width=3645" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">INDO WESTERN SHERWANI</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://ramrajcotton.in/cdn/shop/files/240524_ramraj0145.jpg?v=1718191986&width=1080" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">MANDARIN COLLAR SHIRT</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQodn16ypGJxYTvHI5KvyJ_8OOCCpIpD2A47Q&s"
+                alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div class="text-center max-[1250px]:text-[12px]">PRINTED BANDI WEST</div>
+              <p class="text-center">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </p>
+              <p class="text-center">
+                <span class="font-bold">$7.99</span>
+                <span class="text-gray-500 line-through">$9.99</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiperHr" style="margin-top: 40px;"></div>
+  </section>
+
+  <!-- SWIPER CONTAINER -->
+  <div class="flex justify-between items-center mb-[-10px] ml-20 mr-20 text-left max-[768px]:flex-col">
+    <div>
+      <h1
+        class=" left-0 max-[600px]:text-lg max-[768px]:text-center max-[500px]:text-sm text-left font-bold text-2xl tracking-wider"
+        style="font-family: 'Product Sans';">YOUR
+        BROWSING HISTORY
+      </h1>
+      <h1 class="left-0 text-left max-[630px]:hidden " style="font-family: 'Product Sans';">Looking for something
+        specific? We've got you
+        covered.</h1>
+    </div>
+    <div class="flex items-center gap-4 max-[900px]:flex-col">
+      <div class="text-sm">Page 1 of 10</div>
+      <button
+        class="bg-black hover:bg-white hover:text-black duration-300 hover:border hover:border-black text-white px-4 py-2 rounded-sm"
+        style="font-family: 'Product Sans';">SHOW MORE
+      </button>
+    </div>
+  </div>
+
+  <!-- BROWSE HISTORY -->
+  <section class="swiperContainer" id="browsingHistory">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPM04KSCnVvj2O8U9ySArCL0RRteVkn13KiA&s">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://i.pinimg.com/736x/75/59/fd/7559fd05d781abb5e8405d2c08358988.jpg">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSdvC0c1dsiBTdsaMepQtdNEseQmqke1uwSetmAtmjPkgwtL2UXvWmcEETjN-Zom5glA&usqp=CAU">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLpL1EHUUPbae5wL_M6-cCHiKKYAga4Ik-JQ&s"
+                alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://d6kigqwjl9u8w.cloudfront.net/wysiwyg/2_54.jpg" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://d6kigqwjl9u8w.cloudfront.net/wysiwyg/3_59.jpg" alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img
+                src="https://5.imimg.com/data5/SELLER/Default/2022/4/TZ/KK/QT/28280455/indian-designer-dresses-for-women-500x500.jpg"
+                alt="">
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYYG3sNQMXYmgKPFejcx6VLb3yNyIomLLnLQ&s"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3adjOXoPXmDvguYC55621fyqz94iHNIO0Eg&s"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://i.pinimg.com/564x/fa/bd/d9/fabdd96669f70f05c65666f540b29e01.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://i.pinimg.com/564x/f5/22/e9/f522e93f13b4474f4ef9ae957fa32d97.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://i.pinimg.com/474x/d6/fe/42/d6fe42db2b00386110c59e5a9e83f31e.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0471/9584/8869/products/FST_KI-1724_TAN_MODEL_255x.jpg?v=1680264458"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeXcm2b1W93wdSx-Flki5HiCOqFlNDxHqXjw&s"
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="font-tenor w-full  mt-5 ">
+    <div class="w-full relative text-center text-black">
+      <img src="images/newFooter.jpg" class="h-[300px] w-full object-cover" alt="">
+      <div class="absolute inset-0 flex justify-evenly items-center p-4 space-x-4">
+        <div class="text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">About Us</div>
+          <ul class="footerList">
+            <li>Our Tale</li>
+            <li>Our Stories</li>
+            <li>Terms and Conditions</li>
+            <li>We Care</li>
+          </ul>
+        </div>
+        <div class=" text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Policies</div>
+          <ul class="footerList">
+            <li>Return Policy</li>
+            <li>Privacy </li>
+            <li>Cancellation </li>
+            <li>Refund </li>
+          </ul>
+        </div>
+        <div class="text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Customer Services</div>
+          <ul class="footerList">
+            <li>Payment Policy</li>
+            <li>Shipping &amp; Policy</li>
+            <li>Track your order / Return</li>
+            <li>FAQs</li>
+          </ul>
+        </div>
+        <div class="max-[700px]:hidden text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Contact Us</div>
+          <ul class="footerList">
+            <li>Customer Care: +91 0123456789</li>
+            <li>Service Email: sharewithus@ht.in</li>
+            <li>Legal: compliance@nexo.com</li>
+            <li>Franchise Enquiry</li>
+          </ul>
+        </div>
+      </div>
+      <div class="absolute bottom-12  w-11/12 h-[1px] bg-gray-900 left-1/2 transform -translate-x-1/2"></div>
+      <div class="absolute bottom-5 inset-x-0 flex justify-center space-x-3">
+        <i class="fa-brands cursor-pointer fa-square-facebook fa-lg sm:fa-xl social-icon" style="color: #402536;"></i>
+        <i class="fa-brands cursor-pointer fa-square-instagram fa-lg sm:fa-xl ml-3 social-icon"
+          style="color: #402536;"></i>
+      </div>
+      <div class="absolute mt-2 inset-x-0">
+        <p class="text-center text-xs sm:text-sm md:text-base mb-2">Copyright © 2024 Heritage Threads | Country
+          of Origin: India</p>
+      </div>
+    </div>
+    <div class="w-full">
+      <img src="images/footer.webp" class="w-full h-[400px] object-cover" alt="">
+    </div>
+  </footer>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="search.js"></script>
+
+</html>

@@ -1,0 +1,207 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 32px;
+}
+
+@font-face {
+    font-family: 'Henri Didot';
+    font-weight: 400;
+    font-style: normal;
+    src: url('fonts/HENRIDIDOT.OTF') format('opentype');
+  }
+
+@font-face {
+    font-family: 'Vonique 64';
+    font-weight: 400;
+    font-style: normal;
+    src: url('fonts/VONIQUE64-JKGM.TTF') format('truetype');
+}
+
+  
+.newUL li:not(:nth-child(9)):hover{
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    color : rgb(71, 67, 67);
+}
+.newUL li:nth-child(9):hover{
+    border-bottom: 2px solid rgb(120, 21, 21);
+    cursor: pointer;
+    color : rgb(120, 21, 21);
+}
+.card1{
+    transition: ease 1s;
+}
+.card1:hover{
+    transition: ease .3s;
+    transform: scale(1.02);
+    border: 1px solid rgb(227, 226, 226);
+    box-shadow: 20px 20px 2px rgba(53, 3, 26, 0.5);
+}
+.card1:hover .price{
+    transition: ease .3s;
+    background-color: #402536;
+    color : whitesmoke;
+}
+.card1:hover button{
+    border-left:1px solid whitesmoke;
+    transition: ease .3s;
+    background-color: #402536;
+    color : whitesmoke;
+}
+.card2{
+    transition: ease 1s;
+}
+.card2:hover{
+    transition: ease .3s;
+    transform: scale(1.02);
+    border: 1px solid rgb(227, 226, 226);
+    box-shadow: 20px 20px 2px rgba(53, 3, 26, 0.5);
+}
+.card2:hover .price{
+    transition: ease .3s;
+    background-color: #402536;
+    color : whitesmoke;
+}
+.card2:hover button{
+    border-left:1px solid whitesmoke;
+    transition: ease .3s;
+    background-color: #402536;
+    color : whitesmoke;
+}
+.card3{
+    transition: ease 1s;
+}
+.card3:hover{
+    transition: ease .3s;
+    transform: scale(1.02);
+    border: 1px solid rgb(227, 226, 226);
+    box-shadow: 20px 20px 2px rgba(53, 3, 26, 0.5);
+}
+.card3:hover .price{
+    transition: ease .3s;
+    background-color: #402536;
+    color : whitesmoke;
+}
+.card3:hover button{
+    border-left:1px solid whitesmoke;
+    transition: ease .3s;
+    background-color: #402536;
+    color : whitesmoke;
+}
+.siteButtons .btn{
+    color: whitesmoke;
+    border: 1px solid #A78048;
+}
+.footerList li{
+    margin-top: 10px;   
+}
+.dropdownList {
+    display: inline-block;
+    position: relative;
+}
+.dropdownList a {
+    display: block;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+}
+.dropdownList ul.dropdown li a{
+    padding: 4px 4px;
+    color: white;
+    text-align: center;
+}
+.dropdownList ul.dropdown li {
+    display: block;
+    display: flex;
+    justify-content: center;
+    min-height: 50px;
+}
+.dropdownList ul.dropdown li a {
+    width: 100%;
+    align-items: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size:14px
+}
+.dropdownList ul.dropdown {
+    width: 155px;
+    transform: translateX(-15%);
+    background: black;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.dropdownList ul.dropdown li a:hover {
+    background: #402536;
+}
+.dropdownList:hover ul.dropdown {
+    display: block;
+}
+.hoverButton1{
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: whitesmoke;
+    transition: ease 0.5s;
+    border-radius: 2px;
+    border: 2px solid black;
+}
+.hoverButton1:hover{
+    transition: ease .3s;
+    transform: scale(1.02);
+    color: black;
+    background-color: whitesmoke;
+}
+.hoverButton2{
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    color: whitesmoke;
+    transition: ease 0.5s;
+    border-radius: 2px;
+    border: 2px solid black;
+}
+.hoverButton2:hover{
+    transition: ease .3s;
+    transform: scale(1.02);
+    color: black;
+    background-color: whitesmoke;
+}
+.marquee_part{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0 4px;
+}
+.arrow{
+    width: 60px;
+    height: 80px;
+    margin: 5px 1em;
+    /* margin: 0 1em; */
+    transform : translateY(15px);
+    transform : rotate(270deg);
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.arrow.active{
+    transform:rotate(90deg);
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.footerList li:hover{
+    cursor: pointer;
+    color: rgb(170, 21, 21);
+    /* border-bottom: 2px solid rgb(120, 21, 21); */
+    scale: 1.02;
+    transition: ease .3s;
+}

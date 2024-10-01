@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="Product.css" />
+  <link rel="stylesheet" href="card.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nav: '#402536',
+            textColor: '#26262C',
+          },
+          fontFamily: {
+            avenir: ['AvenirNext LT Pro Regular', 'sans-serif'],
+            poppins: ['Poppins', 'serif'],
+            copper: ['Copperplate Gothic Bold', 'monospace'],
+            tenor: ['Tenor Sans'],
+            kaivalya: ['Kaivalya'],
+            lovelyn: ['Lovelyn'],
+            vonique: ['Vonique 64', 'sans-serif'],
+            henri: ['Henri Didot', 'sans-serif'], // Add your custom font here
+            bookman: ['Bookman Old Style', 'serif'],
+            impact: ['Impact'],
+          },
+
+
+        }
+      }
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="font-tenor ">
+    <!-- navbar advertisement -->
+    <div class="navbar w-full h-14 bg-nav text-white flex items-center justify-center overflow-hidden">
+      <div class="navbarText overflow-hidden text-center text-xs sm:text-sm md:text-base">
+        Free Shipping applicable on orders above Rs 1699 &nbsp; &nbsp; &nbsp; <span class="max-[947px]:hidden">
+          | &nbsp; &nbsp; &nbsp; Standard
+          return fee of Rs 99 applicable on every item returned
+        </span>
+      </div>
+    </div>
+    <!-- navbar -->
+    <div class="logo flex flex-col lg:flex-row justify-evenly items-center">
+      <div class="logo-icons w-full lg:w-5/6 flex items-center mt-2 justify-center">
+        <a href="../Home/index.html">
+          <img src="images/logo.png" alt=""
+            class="w-[150px] h-[90px] lg:w-[200px] lg:h-[120px] translate-x-0 lg:translate-x-[120px]">
+        </a>
+      </div>
+      <div class="icons mt-4 lg:mt-10 gap-3 flex justify-center lg:flex space-x-4 lg:space-x-0 max-[1200px]:mt-10 mr-2">
+        <i class="fa-sharp fa-solid fa-envelope mr-1 lg:mr-3 fa-lg"></i>
+        <i class="fa-sharp fa-solid fa-user mr-2 lg:mr-5 fa-lg"></i>
+        <i class="fa-regular fa-heart mr-2 md:mr-5 fa-lg text-[#d940cc]"></i>
+        <i class="fa-sharp fa-solid fa-magnifying-glass fa-lg"></i>
+        <i class="fa-sharp fa-solid  fa-bag-shopping fa-lg"></i>
+      </div>
+    </div>
+    <div class="subNavbar h-auto p-3 text-textColor">
+      <div
+        class="items w-full text-xs sm:text-sm lg:text-[13px] font-bold flex flex-col lg:flex-row items-center justify-center lg:justify-evenly space-y-2 lg:space-y-1">
+        <ul
+          class="newUL flex flex-wrap gap-4 lg:gap-11 justify-center lg:justify-start listItems max-[947px]:gap-5 max-[947px]:mt-3">
+          <li class="dropdownList">
+            <a class="hover:scale-110 duration-300">MENS WEAR</a>
+            <ul class="dropdown hidden lg:block">
+              <li><a href="">Kurtas</a></li>
+              <li><a href="">Kurtas Set</a></li>
+              <li><a href="">Mens Shirt</a></li>
+              <li><a href="">Mens Pants</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="dropdownList">
+            <a class="hover:scale-110 duration-300">WOMENS WEAR</a>
+            <ul class="dropdown hidden lg:block">
+              <li><a href="">Kurtis &amp; Sarrees</a></li>
+              <li><a href="">Dresses</a></li>
+              <li><a href="">Tops and Tunics</a></li>
+              <li><a href="">Bottom Wear</a></li>
+              <li><a href="">Summer Wear</a></li>
+            </ul>
+          </li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">ASSESSA</li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">NYALANGAN</li>
+          <li>|</li>
+          <li class="text-red-800 hover:scale-110 duration-300" id="uptoDiscount">UPTO 70% OFF</li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">OUR STORIES</li>
+          <li>|</li>
+          <li class="hover:scale-110 duration-300">VIEW ALL</li>
+          <li>|</li>
+          <li class=" hover:scale-110 duration-300">RETURN</li>
+        </ul>
+      </div>
+      <hr class="h-1 mt-4 mb-2 bg-textColor">
+    </div>
+  </nav>
+
+
+
+
+  <!-- HERO SECTION -->
+  <div class="main">
+    <div class="mainImageContainer">
+      <div class="sideImageContainer">
+        <img class="productImage hover:scale-105 duration-300"
+          src="https://ethnicity.in/cdn/shop/products/8907546341999_7_900x.jpg?v=1652892759" alt="" />
+        <img class="productImage hover:scale-105 duration-300"
+          src="https://ethnicity.in/cdn/shop/products/8907546341999_1_900x.jpg?v=1652892761" alt="" />
+        <img class="productImage hover:scale-105 duration-300"
+          src="https://ethnicity.in/cdn/shop/products/8907546341999_6_900x.jpg?v=1652892760" alt="" />
+        <img class="productImage hover:scale-105 duration-300"
+          src="https://ethnicity.in/cdn/shop/products/8907546341999_2_900x.jpg?v=1652892761" alt="" />
+        <img class="productImage hover:scale-105 duration-300"
+          src="https://ethnicity.in/cdn/shop/products/8907546341999_4_900x.jpg?v=1652892763" alt="" />
+      </div>
+      <div class="productImageMainContainer">
+        <img class="productImageMain translate-y-[-23px] p-[24px]"
+          src="https://ethnicity.in/cdn/shop/products/8907546341999_7_900x.jpg?v=1652892759" alt="" />
+      </div>
+    </div>
+    <div id="infoContainer" class="translate-y-[-10px]">
+      <div class="heading">
+        <div class="text-[2.7rem] font-extrabold font-lovelyn">Regular Fit Solid Kurta</div>
+        <h3 class="font-bold">$73.96</h3>
+        <h6 class="font-bold">MRP Inc. of all taxes</h6>
+      </div>
+      <div class="pincode">
+        <input type="number" placeholder="Enter Pincode" />
+        <button class="font-tenor">Check</button>
+      </div>
+      <div class="innerDivGap size">
+        <h4 class="font-bold">Size</h4>
+        <div>
+          <div class="sizeInfo">XS</div>
+          <div class="sizeInfo">S</div>
+          <div class="sizeInfo">M</div>
+          <div class="sizeInfo">L</div>
+          <div class="sizeInfo">XL</div>
+          <div class="sizeInfo">XXL</div>
+        </div>
+      </div>
+      <div class="innerDivGap" style="gap: 24px">
+        <div class="innerDivGap">
+          <h4 class="font-tenor">Color</h4>
+          <button class="whiteButton">Off White</button>
+        </div>
+        <div class="innerDivGap">
+          <h4 class="font-tenor">Style</h4>
+          <button class="whiteButton">Regular Fit</button>
+        </div>
+      </div>
+      <div class="innerDivGap">
+        <h3 class="font-tenor">Quantity</h3>
+        <input value="1" type="number" name="" id=""
+          class="w-[13rem] border-[1px] rounded-sm border-black p-[8px] text-center" />
+        <div class="innerDivGap">
+          <button class="largeButton font-bold text-black bg-blue-700">Add To Cart</button>
+          <button class="largeButton font-bold text-white bg-pink-500">Customize Now</button>
+        </div>
+      </div>
+      <div>
+        <button class="whiteButton">Show More</button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PRODUCT DESCRIPTIONS  -->
+  <div>
+    <div class="relative">
+      <img src="images/p2.png" class="max-[947px]:block w-[240px] z-[2] absolute top-[-43px] right-0 object-cover"
+        alt="">
+    </div>
+    <div class="bg-[#efefef] mt-10 max-[947px]:h-auto">
+      <div
+        class="text-[#3F2021] pt-[100px] px-[190px] py-[50px] font-bookman productDescriptions gap-4 bg-[#efefef] flex flex-col items-center justify-center w-full max-[947px]:pt-[50px] max-[947px]:px-[10px] max-[947px]:py-[20px] max-[947px]:h-auto">
+        <div
+          class="h-[20px] font-impact tracking-wider productsNav top-0 flex space-x-8 z-40 justify-center font-light items-center text-[17px] max-[947px]:mt-10  max-[947px]:space-x-4 max-[947px]:text-[10px]">
+          <div class="hover:border-b-4 border-[#3F2021]">PRODUCT DETAILS</div>
+          <div class="hover:border-b-4 border-[#3F2021]">PRODUCT USAGE</div>
+          <div class="hover:border-b-4 border-[#3F2021]">INSTRUCTIONS</div>
+          <div class="hover:border-b-4 border-[#3F2021]">INGREDIENTS</div>
+        </div>
+        <div class="productsHeading">
+          <div class="text-[48px] font-henri font-extrabold tracking-wider max-[947px]:text-[36px]">CHOICE OF MATERIALS
+          </div>
+        </div>
+        <div class="productsCards flex gap-[140px] max-[947px]:flex-col max-[947px]:gap-4 justify-center items-center">
+          <div class="flex w-[220px] items-center justify-center flex-col max-[947px]:w-[150px]">
+            <img src="images/img1.png" class="w-[160px] h-[120px] max-[947px]:w-[120px] max-[947px]:h-[90px]" alt="">
+            <div class="font-bold flex text-center justify-center items-center text-[28px] max-[947px]:text-[20px]">Pure
+              Cotton Embroidery</div>
+          </div>
+          <div class="flex w-[220px] items-center justify-center flex-col max-[947px]:w-[150px]">
+            <img src="images/img2.png" class="w-[160px] h-[120px] max-[947px]:w-[120px] max-[947px]:h-[90px]" alt="">
+            <div class="font-semibold flex text-center justify-center items-center text-[28px] max-[947px]:text-[20px]">
+              Indigenous Fabric & Yarn</div>
+          </div>
+          <div class="flex w-[220px] items-center justify-center flex-col max-[947px]:w-[150px]">
+            <img src="images/img3.png" class="w-[135px] h-[120px] max-[947px]:w-[100px] max-[947px]:h-[90px]" alt="">
+            <div class="font-semibold flex text-center justify-center items-center text-[28px] max-[947px]:text-[20px]">
+              Hardworking and Durable</div>
+          </div>
+        </div>
+        <div class="productsText  max-[947px]:hidden  w-full h-[110px] max-[947px]:h-auto" style="display: none;">
+          <p class="text-[14px] max-[947px]:hidden" id="myText">
+            Mrs. Meyer's Clean Day Dish Soap is specifically made to make grease disappear, while also providing a
+            special, singular scent for your entire home. Our biodegradable formula liquid dish soap cuts through grease
+            and is best for hand-washing dishes, pots, and pans. The dishwashing liquid contains plant-derived cleaning
+            ingredients that make dishes clean and bright. Made without parabens, phthalates, animal-derived
+            ingredients, Mrs. Meyer's products are made with cruelty-free formulas and are Leaping Bunny certified.
+            Also available as a 48-ounce refill in Basil, Honeysuckle, Lavender, Lemon Verbena, and Peony scents.
+          </p>
+        </div>
+      </div>
+      <div class="collapaseButtton mt-2 w-full h-12 justify-center items-center flex">
+
+        <div
+          class="text-white hover:bg-[#301d29] duration-150 cursor-pointer bg-[#402536] h-full w-[200px] flex justify-center items-center rounded-t-md font-extrabold px-4 py-6"
+          onclick="toggleText()" id="collapseButton">
+          COLLAPSE
+        </div>
+
+      </div>
+    </div>
+    <div class="relative">
+      <img src="images/p1.png" class=" max-[947px]:block w-[140px] z-[2] absolute top-[-180px] left-0 object-cover"
+        alt="">
+    </div>
+  </div>
+
+
+
+  <!-- RELATED PRODUCTS PAGE  -->
+  <div class="newDivHeading">
+    <img src="./images/lineBreaker.jpg" alt="" class="lineBreaker" />
+    <div class="max-[947px]:text-[27px] max-[500px]:text-[20px] font-bold text-[44px] font-henri tracking-[6px]">
+      CUSTOMERS ALSO BOUGHT</div>
+    <img src="./images/lineBreaker.jpg" alt="" class="lineBreaker rotate180" />
+  </div>
+
+  <section class="swiperContainer w-[94%]">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants2.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants3.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/shirt3.png" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants2.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants3.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants4.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants5.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- REVIEWS SECTION -->
+
+  <section class="flex flex-col mb-10 justify-center items-center gap-10">
+    <div class="w-full h-[1px] mt-20 bg-gray-200"></div>
+    <div class="flex flex-col gap-10 mt-2 mb-10 justify-center items-center">
+      <div class="flex gap-[28px] flex-col justify-center items-center">
+        <div class="w-full max-[947px]:px-20  auto py-2 px-80 text-center text-[29px] font-bold bg-[#efefef]">
+          <p>PRODUCT REVIEWS</p>
+        </div>
+        <div class="flex gap-[20px] flex-col justify-center items-center">
+          <div class="flex gap-[40px] justify-center items-center max-[600px]:flex-col">
+            <div
+              class="bg-[#efefef] gap-2 w-auto px-5 py-7 h-auto rounded-sm flex flex-col justify-center items-center max-[600px]:text-sm">
+              <p class="font-bold max-[600px]:text-sm text-lg">Based on 10 reviews</p>
+              <p class="font-bold max-[600px]:text-sm text-[35px]">4.7 / 5</p>
+              <p class="font-bold max-[600px]:text-sm text-lg">100% Genuine Product</p>
+            </div>
+            <div class="flex gap-3 flex-col justify-center items-center">
+              <div class="flex gap-2 items-center">
+                <div><i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <div class="w-[200px] bg-gray-200 rounded-sm
+               dark:bg-gray-400">
+                  <div class="bg-yellow-400 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-sm"
+                    style="width: 75%"></div>
+                </div>
+                <div class="max-[600px]:text-md w-[100px]">3671 / 5000</div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div><i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <div class="w-[200px] bg-gray-200 rounded-sm
+               dark:bg-gray-400">
+                  <div class="bg-yellow-400 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-sm"
+                    style="width: 19%"></div>
+                </div>
+                <div class="max-[600px]:text-md w-[100px]">950 / 5000</div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div><i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <div class="w-[200px] bg-gray-200 rounded-sm
+               dark:bg-gray-400">
+                  <div class="bg-yellow-400 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-sm"
+                    style="width: 1%"></div>
+                </div>
+                <div class="max-[600px]:text-md w-[100px]">41 / 5000</div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div><i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <div class="w-[200px] bg-gray-200 rounded-sm
+               dark:bg-gray-400">
+                  <div class="bg-yellow-400 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-sm"
+                    style="width: 1%"></div>
+                </div>
+                <div class="max-[600px]:text-md w-[100px]">52 / 5000 </div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <div><i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i></div>
+                <div class="w-[200px] bg-gray-200 rounded-sm
+               dark:bg-gray-400">
+                  <div class="bg-yellow-400 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-sm"
+                    style="width: 4%"></div>
+                </div>
+                <div class="max-[600px]:text-md w-[100px]">201 / 5000</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-5 w-full h-full flex flex-col justify-center items-center max-[1000px]:text-sm">
+            <div class="flex gap-2 items-center">
+              <button id="toggleButton" class="border-2  border-black px-10 py-2 rounded-sm">
+                <i class="fa-sharp fa-solid fa-pen-to-square text-[20px] mr-2"></i>
+                WRITE A REVIEW
+              </button>
+            </div>
+            <div id="animatedDiv"
+              class="border-b-2 bg-[#EFEFEF] text-[#3F2021] border-black w-[1000px] font-bookman animated-div p-[20px] mt-[20px] opacity-0 translate-y-[-50px] hidden max-[1000px]:flex-col">
+              <div class="flex flex-col gap-5 max-[1000px]:flex-col ">
+                <div class="flex flex-col gap-2">
+                  <div class="text-2xl font-henri font-extrabold text-left">Write a Review</div>
+                  <div class="flex justify-between max-[1000px]:flex-col">
+                    <div class="flex flex-col gap-1">
+                      <div class="text-sm text-[#3F2021]">Name</div>
+                      <div class="border-[1px]  flex justify-start border-gray-400 h-[40px] w-[415px]">
+                        <input class="text-sm  p-2 w-full h-full" type="text" placeholder="Enter your name">
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-1 max-[1000px]:mt-2">
+                      <div class="text-sm text-[#3F2021]">Email</div>
+                      <div class="border-[1px]  flex justify-start border-gray-400 h-[40px] w-[415px]">
+                        <input class="text-sm p-2 w-full h-full" type="text" placeholder="Enter your email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <p class="text-sm text-[#3F2021]">Ratings</p>
+                  <div class="flex gap-1">
+                    <i class="fa-sharp fa-solid fa-star star-icon" data-rating="1"></i>
+                    <i class="fa-sharp fa-solid fa-star star-icon" data-rating="2"></i>
+                    <i class="fa-sharp fa-solid fa-star star-icon" data-rating="3"></i>
+                    <i class="fa-sharp fa-solid fa-star star-icon" data-rating="4"></i>
+                    <i class="fa-sharp fa-solid fa-star star-icon" data-rating="5"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex flex-col gap-1">
+                    <div class="text-sm text-[#3F2021]">Review Title</div>
+                    <div class="border-[1px] flex justify-start border-gray-400 h-[40px] w-full">
+                      <input class="text-sm p-2 w-full h-full" type="text" placeholder="Give your review a title">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex flex-col gap-1">
+                    <div class="text-sm text-[#3F2021]">Review</div>
+                    <div class="border-[1px]  flex  border-gray-400 h-[70px] w-full">
+                      <input class="text-sm p-2 flex items-start w-full h-full" type="text"
+                        placeholder="Write your comments here">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex max-[1000px]:flex-col max-[1000px]:gap-5
+                max-[1000px]:item py-5 gap-2 mt-5">
+                <div class="mt-10 p-2 max-[1000px]:mb-5">
+                  <i class="fa-sharp bg-black text-[100px] fa-solid fa-upload fa-2xl text-[#3F2021]"></i>
+                </div>
+                <div class=" text-[#3F2021] flex flex-col gap-2">
+                  <div class="text-md">Select Files to Upload Photo and Video</div>
+                  <div class="text-md">5 Photos of each upto 5MB and 1 Video upto 25MB</div>
+                  <div class="text-md">Confirmation of your review will be sent to your email</div>
+                </div>
+              </div>
+              <div class="flex mt-4 justify-start gap-2">
+                <div>
+                  <button class="btn btn-2 hover-slide-right">
+                    <span>Submit Review</span>
+                  </button>
+                </div>
+                <div>
+                  <button class="btn btn-2 hover-slide-right">
+                    <span>Cancel</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-1 mb-10 gap-10 w-full flex flex-col justify-center items-center">
+      <div class="w-[80%] border-b-2 border-gray-200 outline-b-2 outline-gray-200">
+        <div class="flex justify-between items-center">
+          <div class="border-b-[3px] border-black font-bold text-[20px]">Reviews <span
+              class="font-extrabold bg-gray-300 px-2 py-1 rounded-sm">10</span></div>
+          <div class="flex">
+            <span class="font-bold mr-3">
+              Sort By :
+            </span>
+            <ul>
+              <li class="dropdownList1 text-xl">
+                <a>Attachemnts</a>
+                <ul class="dropdown1 hidden md:block">
+                  <li><a href="">Ratings</a></li>
+                  <li><a href="">Likes</a></li>
+                  <li><a href="">Color</a></li>
+                  <li><a href="">Price</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="reviewContainer flex flex-col gap-10 w-[80%]" id="reviewContainer">
+        <div class="reviewCard flex flex-col gap-10" id="reviewCard">
+          <div class="flex gap-10">
+            <div class="flex flex-col gap-3 w-[20%]">
+              <div
+                class="bg-black text-white text-2xl flex justify-center items-center text-center w-[60px] h-[60px] rounded-full border-2 border-black hover:bg-white duration-300 hover:text-black hover:border-2 hover:border-black"
+                id="profilePic">
+                PK
+              </div>
+              <div class="flex gap-1 rating max-[600px]:text-[10px]">
+                <i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-sharp fa-solid fa-star" style="color: #FFD43B;"></i>
+              </div>
+              <div class="font-bold reviewer-name">Prashant Karulkar</div>
+              <div class="text-gray-500 text-sm review-date">1 year ago</div>
+            </div>
+            <div class="flex  flex-col gap-3 w-[80%]">
+              <div class="review-title font-black text-2xl font-henri tracking-wide">
+                GREAT FIT AND EXCEEDED MY EXPECTATIONS
+              </div>
+              <div class="review-text">Very nice product, brought 2 shirts from them, really nice fit and Comfortable
+                to wear, looks good,
+                worth it in this range.It is excellent, colour is good,the size also fited to me .</div>
+              <div class="flex gap-8 cursor-pointer">
+                <div class="flex gap-2">
+                  <i class="fa-sharp fa-regular fa-thumbs-up text-xl translate-y-[-3px]"></i>
+                  <div class="like-count">420</div>
+                </div>
+                <div class="flex gap-2">
+                  <i class="mt-[0px] fa-sharp fa-regular fa-thumbs-down text-xl"></i>
+                  <div class="dislike-count">33</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-[2px] w-full bg-gray-200"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE SECTION -->
+  <!-- RELATED PRODUCTS PAGE  -->
+  <div class="newDivHeading mb-10">
+    <img src="./images/lineBreaker.jpg" alt="" class="lineBreaker" />
+    <div class="max-[947px]:text-[27px] max-[500px]:text-[20px] font-bold text-[44px] font-henri tracking-[6px]">
+      CUSTOMERS ALSO VIEWED</div>
+    <img src="./images/lineBreaker.jpg" alt="" class="lineBreaker rotate180" />
+  </div>
+
+  <section class="swiperContainer w-[94%]">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants2.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants3.jpg">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/shirt3.png" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants2.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants3.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants4.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="newContainer">
+            <div class="innerContainer">
+              <img src="images/pants5.jpg" alt="">
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <div>WHITE SUBTLE SHEEN SUIT</div>
+              <p>Product Description</p>
+              <p>Available Sizes : 38</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Footer  -->
+  <footer class="font-tenor w-full  mt-5 ">
+    <div class="w-full relative text-center text-black">
+      <img src="images/newFooter.jpg" class="h-[300px] w-full object-cover" alt="">
+      <div class="absolute inset-0 flex justify-evenly items-center p-4 space-x-4">
+        <div class="text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">About Us</div>
+          <ul class="footerList">
+            <li>Our Tale</li>
+            <li>Our Stories</li>
+            <li>Terms and Conditions</li>
+            <li>We Care</li>
+          </ul>
+        </div>
+        <div class=" text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Policies</div>
+          <ul class="footerList">
+            <li>Return Policy</li>
+            <li>Privacy </li>
+            <li>Cancellation </li>
+            <li>Refund </li>
+          </ul>
+        </div>
+        <div class="text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Customer Services</div>
+          <ul class="footerList">
+            <li>Payment Policy</li>
+            <li>Shipping &amp; Policy</li>
+            <li>Track your order / Return</li>
+            <li>FAQs</li>
+          </ul>
+        </div>
+        <div class="max-[700px]:hidden text-left text-xs sm:text-sm md:text-base">
+          <div class="font-bold mb-2 hover:border-b-2 hover:border-b-black lg:text-xl">Contact Us</div>
+          <ul class="footerList">
+            <li>Customer Care: +91 0123456789</li>
+            <li>Service Email: sharewithus@ht.in</li>
+            <li>Legal: compliance@nexo.com</li>
+            <li>Franchise Enquiry</li>
+          </ul>
+        </div>
+      </div>
+      <div class="absolute bottom-12  w-11/12 h-[1px] bg-gray-900 left-1/2 transform -translate-x-1/2"></div>
+      <div class="absolute bottom-5 inset-x-0 flex justify-center space-x-3">
+        <i class="fa-brands cursor-pointer fa-square-facebook fa-lg sm:fa-xl social-icon" style="color: #402536;"></i>
+        <i class="fa-brands cursor-pointer fa-square-instagram fa-lg sm:fa-xl ml-3 social-icon"
+          style="color: #402536;"></i>
+      </div>
+      <div class="absolute mt-2 inset-x-0">
+        <p class="text-center text-xs sm:text-sm md:text-base mb-2">Copyright © 2024 Heritage Threads | Country
+          of Origin: India</p>
+      </div>
+    </div>
+    <div class="w-full">
+      <img src="images/footer.webp" class="w-full h-[400px] object-cover" alt="">
+    </div>
+  </footer>
+
+
+
+</body>
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const animatedDiv = document.getElementById('animatedDiv');
+  let visible = false;
+  function toggleVisibility() {
+    if (visible) {
+      gsap.to(animatedDiv, { duration: 0.3, opacity: 0, y: -50, display: 'none', ease: "linear" });
+    } else {
+      gsap.fromTo(animatedDiv,
+        { opacity: 0, y: -50, display: 'block' },
+        { duration: 0.3, opacity: 1, y: 0, ease: "linear" }
+      );
+    }
+    visible = !visible;
+  }
+
+  // Attach event listener
+  toggleButton.addEventListener('click', toggleVisibility);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="Product.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 26,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      }
+    }
+  });
+</script>
+
+</html>
