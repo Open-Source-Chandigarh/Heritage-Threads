@@ -131,45 +131,48 @@
     <!-- SIGN UP SECTION -->
     <main class="flex m-2 justify-center items-center max-[1200px]:flex-col">
         <div
-            class="bg-[url('https://img.freepik.com/free-vector/floral-new-collection-banner-template_1361-1251.jpg?w=1060&t=st=1724990993~exp=1724991593~hmac=a60f4f585e9af2174703e9d6acf3143fe52c36d8e91803ce26c9406c875b7732')] right mt-2 mb-2 mr-2 w-[100%] bg-cover bg-center h-[600px]">
+          class="bg-[url('https://img.freepik.com/free-vector/floral-new-collection-banner-template_1361-1251.jpg?w=1060&t=st=1724990993~exp=1724991593~hmac=a60f4f585e9af2174703e9d6acf3143fe52c36d8e91803ce26c9406c875b7732')] right mt-2 mb-2 mr-2 w-[100%] bg-cover bg-center h-[600px]">
         </div>
-
+      
         <div class="left grid mr-2">
-            <div class="flex-col mt-7 font-lovelyn ml-[52px]  justify-center items-center">
-                <h1
-                    class="text-[40px] max-[1200px]:text-center   mb-6 font-bold-[10px] font-tenor max-[1200px]:translate-x-[-6%]">
-                    SIGN UP
-                </h1>
-                <div class="flex flex-col gap-4 mb-10">
-                    <div class="border-b-2 border-black max-[500px]:w-[300px] w-[410px] p-2 text-lg text-center">
-                        <input type="text" class="w-full font-poppins h-full border-none outline-none"
-                            placeholder="Email">
-                    </div>
-                    <div class="border-b-2 border-black max-[500px]:w-[300px] w-[410px] p-2 text-lg text-center">
-                        <input type="password" class="w-full font-poppins h-full border-none outline-none"
-                            placeholder="Set Password">
-                    </div>
-                    <div class="border-b-2 border-black w-[410px] max-[500px]:w-[300px] p-2 text-lg text-center">
-                        <input type="text" class="w-full font-poppins h-full border-none outline-none"
-                            placeholder="Confirm Password">
-                    </div>
+          <div class="flex-col mt-7 font-lovelyn ml-[52px]  justify-center items-center">
+            <h1
+              class="text-[40px] max-[1200px]:text-center   mb-6 font-bold-[10px] font-tenor max-[1200px]:translate-x-[-6%]">
+              SIGN UP
+            </h1>
+            <form> <!-- Add a form element to wrap the input fields -->
+              <div class="flex flex-col gap-4 mb-10">
+                <div class="border-b-2 border-black max-[500px]:w-[300px] w-[410px] p-2 text-lg text-center">
+                  <input type="text" class="w-full font-poppins h-full border-none outline-none"
+                    placeholder="Email" id="email-input"> <!-- Add an ID to the input fields -->
                 </div>
-                <div class="text-md font-Google transition-all duration-300 translate-y-[-20px]">
-                    Already have an account? <span class="text-blue-500 hover:text-blue-900 cursor-pointer">Sign
-                        In</span>
+                <div class="border-b-2 border-black max-[500px]:w-[300px] w-[410px] p-2 text-lg text-center">
+                  <input type="password" class="w-full font-poppins h-full border-none outline-none"
+                    placeholder="Set Password" id="password-input">
                 </div>
-            </div>
-
-
-            <!-- SIGN UP BUTTONS -->
-            <div class="flex ml-[52px] max-[500px]:gap-10 justify-between w-4/5 p-2">
-                <button class="hoverButton1 h-[50px] rounded-sm">
-                    Sign In
+                <div class="border-b-2 border-black w-[410px] max-[500px]:w-[300px] p-2 text-lg text-center">
+                  <input type="text" class="w-full font-poppins h-full border-none outline-none"
+                    placeholder="Confirm Password" id="confirm-password-input">
+                </div>
+              </div>
+              <div class="text-md font-Google transition-all duration-300 translate-y-[-20px]">
+                Already have an account? <span class="text-blue-500 hover:text-blue-900 cursor-pointer">Sign
+                  In</span>
+              </div>
+      
+              <!-- SIGN UP BUTTONS -->
+              <div class="flex ml-[52px] max-[500px]:gap-10 justify-between w-4/5 p-2">
+                <button class="hoverButton1 h-[50px] rounded-sm" id="sign-in-button">
+                  Sign In
                 </button>
-                <button class="hoverButton2 h-[50px] rounded-sm">
-                    Create an Account
+                <button class="hoverButton2 h-[50px] rounded-sm" id="create-account-button">
+                  Create an Account
                 </button>
-            </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
             <!-- SITE BUTTONS -->
             <div class="mt-10 mb-10 flex justify-center gap-4 ">
                 <button
@@ -193,7 +196,7 @@
                 </button>
 
             </div>
-
+            
         </div>
     </main>
 
