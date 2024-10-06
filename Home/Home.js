@@ -1,3 +1,9 @@
+window.addEventListener("load",()=>{
+  setTimeout(()=>{
+      document.querySelector("#loader").style.display= `none`;
+      
+  },1000)
+})
 const gridImages = document.querySelectorAll('.gridImage');
 gridImages.forEach(image => {
   image.addEventListener('mouseover', () => {
