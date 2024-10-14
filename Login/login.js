@@ -2,18 +2,19 @@
 const navbar  = document.querySelector(".navbarText");
 gsap.fromTo(navbar,
     {
-    duration: 14,
+    duration: 25,
     x: "220%",
     ease: "linear",
     repeat: -1,
     yoyo:true
 },{
-    duration: 14,
+    duration: 25,
     x: "-200%",
     ease: "linear",
     repeat: -1,
 }
 )
+
 const targetText = document.querySelector(".targetText h2");
 const targetTextContainer = document.querySelector(".targetText");
 gsap.to(targetText, {
