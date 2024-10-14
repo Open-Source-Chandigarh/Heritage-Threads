@@ -1,3 +1,9 @@
+window.addEventListener("load",()=>{
+  setTimeout(()=>{
+      document.querySelector("#loader").style.display= `none`;
+      
+  },1000)
+})
 // NAVBAR ADVERTISEMENT
 const navbar  = document.querySelector(".navbarText");
 gsap.fromTo(navbar,
