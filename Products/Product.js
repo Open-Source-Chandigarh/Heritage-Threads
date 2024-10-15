@@ -6,20 +6,25 @@ window.addEventListener("load",()=>{
 })
 // NAVBAR ADVERTISEMENT
 const navbar  = document.querySelector(".navbarText");
-gsap.fromTo(navbar,
+const navbarAnimation =gsap.fromTo(navbar,
     {
     duration: 14,
     x: "220%",
     ease: "linear",
     repeat: -1,
-    yoyo:true
+    yoyo:true,
+    paused:false
 },{
-    duration: 14,
+    duration: 20,
     x: "-200%",
     ease: "linear",
     repeat: -1,
 }
 )
+//PAUSE ADVERTISEMENT ON HOVER
+navbar.addEventListener("mouseenter", () => navbarAnimation.pause());
+navbar.addEventListener("mouseleave", () => navbarAnimation.play());
+
 const targetText = document.querySelector(".targetText h2");
 const targetTextContainer = document.querySelector(".targetText");
 gsap.to(targetText, {
