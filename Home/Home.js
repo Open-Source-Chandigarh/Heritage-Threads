@@ -280,3 +280,38 @@ gsap.from("#animatedTitle", {
   y: -50,
   ease: "power2.out"
 });
+
+// Newsletter JS
+function showMessage() {
+  var email = document.getElementById("email-box").value.trim();
+
+  // Check if any field is empty
+  if (email === "") {
+    Swal.fire({
+      title: "Error!",
+      text: "Missing Email",
+      icon: "error",
+      confirmButtonText: "OK"
+    });
+  } else {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      Swal.fire({
+        title: "Error!",
+        text: "Invalid email address",
+        icon: "error",
+        confirmButtonText: "OK"
+      });
+      return;
+    } else {
+      Swal.fire({
+        title: "Subscribed Successfully",
+        text: "Thank You for Subscribing!",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+      document.getElementById("email-box").value = "";
+    }
+  }
+}
+
