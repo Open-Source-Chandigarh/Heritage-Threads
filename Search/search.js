@@ -1,3 +1,10 @@
+window.addEventListener("load",()=>{
+  setTimeout(()=>{
+      document.querySelector("#loader").style.display= `none`;
+      
+  },1000)
+})
+
 // DISCOVER MORE
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 7,

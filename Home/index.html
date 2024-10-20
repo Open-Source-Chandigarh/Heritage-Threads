@@ -229,6 +229,9 @@
 </head>
 
 <body>
+    <div id="loader" style="height: 100svh; width: 100%; background-color: black; position: fixed; top: 0; left: 0; z-index:100;">
+        <div class="loader"></div>
+    </div> 
     <div>
         <nav>
             <div class="headerContainer">
@@ -687,9 +690,9 @@
                 Sign up to our newsletter to receive exclusive offers.
             </p>
             <div class="newsletterFormContainer">
-                <div class="newsletterFormInputContainer"><input type="text" placeholder="E-mail"></div>
+                <div class="newsletterFormInputContainer"><input id="email-box" type="email" type="text" placeholder="E-mail"></div>
                 <div>
-                    <button class="btn btn-2 hover-slide-right" style="width: 300px;">
+                    <button type="button" onclick="showMessage()" class="btn btn-2 hover-slide-right" style="width: 300px;">
                         <span>SUBSCRIBE</span>
                     </button>
                 </div>
@@ -1051,7 +1054,7 @@
                     <ul class="footerList font-tenor">
                         <li>Our Tale</li>
                         <li>Our Stories</li>
-                        <li>Terms and Conditions</li>
+                        <li><a href="../t&C/t&C.html" style="text-decoration: none; font-weight: normal;">Terms and Conditions</a></li>
                         <li>We Care</li>
                     </ul>
                 </div>
@@ -1165,5 +1168,7 @@
         }
     });
 </script>
+<!-- JS for Newsletter -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </html>
