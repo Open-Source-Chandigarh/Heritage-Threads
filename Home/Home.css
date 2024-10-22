@@ -392,6 +392,10 @@ html{
     position: relative;
     top:140vh;
 }
+.my-heightFullView{
+    position: relative;
+    top:-10vh;
+}
 .collectionContainer .grid-item {
     background-color: #f0f0f0;
     position: relative;

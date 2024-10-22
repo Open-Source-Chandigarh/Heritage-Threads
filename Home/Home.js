@@ -282,6 +282,8 @@ gsap.from("#animatedTitle", {
 });
 
 // Newsletter JS
+
+  // Check if any field is empty
 function showMessage() {
   var email = document.getElementById("email-box").value.trim();
 
@@ -293,7 +295,7 @@ function showMessage() {
       icon: "error",
       confirmButtonText: "OK",
       customClass: {
-        popup: "my-height",
+        popup: document.querySelector(".collectionContainer").classList.contains("halfView") ? "my-height" : "my-heightFullView"
       },
     });
   } else {
@@ -305,7 +307,7 @@ function showMessage() {
         icon: "error",
         confirmButtonText: "OK",
         customClass: {
-          popup: "my-height",
+          popup: document.querySelector(".collectionContainer").classList.contains("halfView") ? "my-height" : "my-heightFullView"
         },
       });
       return;
@@ -316,7 +318,7 @@ function showMessage() {
         icon: "success",
         confirmButtonText: "OK",
         customClass: {
-          popup: "my-height",
+          popup: document.querySelector(".collectionContainer").classList.contains("halfView") ? "my-height" : "my-heightFullView"
         },
       });
       document.getElementById("email-box").value = "";
