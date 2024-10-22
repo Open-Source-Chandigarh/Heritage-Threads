@@ -45,6 +45,72 @@
         }
     </script>
     <style>
+        /* Ensure proper text alignment */
+        .text-center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .indent {
+            margin-left: 0;
+        }
+
+        .caps {
+            text-transform: uppercase;
+        }
+
+        .serif {
+            font-family: "Times New Roman", serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400&display=swap');
+
+        .productTitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .productDescription {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            color: #555;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .productSizes {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+
+
+        #swiperMainHeading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .swiperHeadingText {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+
         @media (max-width: 768px) {
 
 
@@ -229,39 +295,39 @@
 </head>
 
 <body>
-    <div id="loader" style="height: 100svh; width: 100%; background-color: black; position: fixed; top: 0; left: 0; z-index:100;">
+    <div id="loader"
+        style="height: 100svh; width: 100%; background-color: black; position: fixed; top: 0; left: 0; z-index:100;">
         <div class="loader"></div>
-    </div> 
+    </div>
     <div>
         <nav>
-            <div class="headerContainer">
+            <div class="headerContainer h-[60px] flex items-center justify-between">
                 <div class="headerLeft">
-                    <ul class="flex" id="cultureEventContainer">
-                        <li class="cultureShow"><i class="fa-solid fa-globe"></i></li>
-                        <li class="eventShow">
-                            <i class="fa-solid fa-calendar-days"></i>
-                        </li>
+                    <ul class="flex items-center" id="cultureEventContainer">
+                        <li class="cultureShow mx-2"><i class="fa-solid fa-globe text-[15px]"></i></li>
+                        <li class="eventShow mx-2"><i class="fa-solid fa-calendar-days text-[15px]"></i></li>
                     </ul>
                 </div>
-                <div class="headerCenter translate-x-[70px] h-[100px] w-[200px] flex items-center justify-center"
+                <div class="headerCenter translate-x-[50px] h-[60px] w-[150px] flex items-center justify-center"
                     id="logoContainer">
-                    <a href="../Home/index.html" class="cursor-pointer w-[200px] h-[100px]">
-                        <img src="../Home/images/logo.png" class="w-full h-full object-cover " />
+                    <a href="../Home/index.html" class="cursor-pointer w-[150px] h-[60px]">
+                        <img src="../Home/images/logo.png" class="w-full h-full object-cover" />
                     </a>
                 </div>
-                <div class="headerRight" id="linksContainer">
-                    <a href="../Search/search.html">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="headerRight flex items-center" id="linksContainer">
+                    <a href="../Search/search.html" class="mx-2">
+                        <button><i class="fa-solid fa-magnifying-glass text-[18px]"></i></button>
                     </a>
-                    <a href="../Login/login.html">
-                        <button><i class="fa-regular fa-user"></i></button>
+                    <a href="../Login/login.html" class="mx-2">
+                        <button><i class="fa-regular fa-user text-[18px]"></i></button>
                     </a>
-                    <a href="../Products/product.html">
-                        <button><i class="fa-solid fa-cart-shopping"></i></button>
+                    <a href="../Products/product.html" class="mx-2">
+                        <button><i class="fa-solid fa-cart-shopping text-[18px]"></i></button>
                     </a>
                 </div>
             </div>
         </nav>
+
         <div class="shopByCultureContainer">
             <div class="shopByCulture commonNav"></div>
             <div class="shopByEvent commonNav"></div>
@@ -302,26 +368,25 @@
                     <p>A journey through India's rich textile traditions</p>
                 </div>
             </div>
-            <div class="content" id="upperSectionContent">
-                <p><span class="indent"><span class="caps">Indian fashion</span> is more than just clothing. It
-                        reflects centuries of tradition, culture, and artistry.</span> Each piece is a story woven into
-                    the fabric, celebrating India's diverse heritage. <span class="indent serif">Discover the
-                        elegance of traditional attire and how it continues to inspire modern fashion.</span></p>
+            <div class="content text-center" id="upperSectionContent">
+                <p><span class="caps">Indian fashion</span> is more than just clothing. It
+                    reflects centuries of tradition, culture, and artistry. Each piece is a story woven into
+                    the fabric, celebrating India's diverse heritage. Discover the elegance of traditional attire and
+                    how it continues to inspire modern fashion.</p>
 
-                <h3>Exploring Traditional Textiles</h3>
+                <h3 style="font-weight: 400; font-size: 1.5rem;">Exploring Traditional Textiles</h3>
 
                 <p>Understanding the significance of different textiles is key to appreciating Indian fashion.
                     Fabrics like silk, cotton, and wool have unique cultural meanings and uses. <strong>These
                         materials not only tell the story of the region they come from but also highlight the skills of
                         the artisans.</strong></p>
 
-                <p><span class="indent serif"><span class="caps">Every textile</span> has a tale to tell, whether it's
-                        the intricate
-                        weaves of Banarasi silk or the vibrant hues of Rajasthani cotton. </span><strong class="indent">
+                <p><span class="caps">Every textile</span> has a tale to tell, whether it's
+                    the intricate weaves of Banarasi silk or the vibrant hues of Rajasthani cotton. <strong>
                         Each thread represents a piece of India's cultural mosaic.</strong> Embrace these traditions
                     and the beauty they bring to the world of fashion.</p>
             </div>
-        </div>
+
     </section>
 
     <section class="section bg-[#eee3d6] text-[#5c4738]" id="lowerSection">
@@ -336,10 +401,11 @@
                     <p>Crafting Legacy Through Fashion</p>
                 </div>
             </div>
-            <div class="content" id="lowerSectionContent">
+            <div class="content text-center" id="lowerSectionContent">
                 <p>Every piece in our collection is a tribute to India's rich cultural heritage, blending
                     traditional craftsmanship with contemporary design. <strong>Experience the elegance of
-                        handcrafted attire and celebrate the artisans who make it possible.</strong></p>
+                        handcrafted attire and celebrate the artisans who make it possible.</strong>
+                </p>
             </div>
         </div>
     </section>
@@ -377,9 +443,9 @@
                         <div class="innerContainer">
                             <img src="https://assets0.mirraw.com/images/12415408/2668581_1_long_webp.webp?1714056375">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -387,9 +453,9 @@
                         <div class="innerContainer">
                             <img src="https://i.pinimg.com/736x/75/59/fd/7559fd05d781abb5e8405d2c08358988.jpg">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -397,9 +463,9 @@
                         <div class="innerContainer">
                             <img src="https://i.pinimg.com/474x/2d/b1/e7/2db1e733dc7d15708b50c0bae956299b.jpg">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -407,9 +473,9 @@
                         <div class="innerContainer">
                             <img src="https://i.pinimg.com/736x/df/17/6e/df176e7c6f445e165d72954413795bc1.jpg" alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -418,9 +484,9 @@
                             <img src="https://www.chirosbyjigyasa.com/cdn/shop/products/kessi-lymi-vintage-muslin-kurti-9230.jpg?v=1594580734"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -429,9 +495,9 @@
                             <img src="https://assets0.mirraw.com/images/9751387/103-Purple-1_long_webp.webp?1688216758"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -440,9 +506,9 @@
                             <img src="https://cdn.shopify.com/s/files/1/2260/2507/files/unnamed_f1dae263-89e3-4265-a68a-44bf7ca8af4d_600x600.jpg?v=1631407207"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -451,9 +517,9 @@
                             <img src="https://www.hatkay.com/cdn/shop/files/Indian_Ethnic_Wear-inner.jpg?v=1656132069"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
             </div>
@@ -465,9 +531,9 @@
                         <div class="innerContainer">
                             <img src="https://www.hatkay.com/cdn/shop/files/Indian_Ethnic_Wear-inner.jpg?v=1656132069">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -476,9 +542,9 @@
                             <img
                                 src="https://media.nihalfashions.com/blog/wp-content/uploads/Modern-Trends-Influencing-Indian-Mens-Fashion-Choices.jpg">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -486,9 +552,9 @@
                         <div class="innerContainer">
                             <img src="https://i.pinimg.com/736x/44/14/f4/4414f4deea4002a5ae3fa8bda8705d24.jpg">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -497,9 +563,9 @@
                             <img src="https://media.list.ly/production/291147/1830749/item1830749_600px.jpeg?ver=7255795432"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -508,9 +574,9 @@
                             <img src="https://th.bing.com/th/id/OIP.6HGi6eWRY7IIL4p1vv_MhwAAAA?w=270&h=405&rs=1&pid=ImgDetMain"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -519,9 +585,9 @@
                             <img src="https://th.bing.com/th/id/OIP.KtScE4sBWBQub7AKnGVryQHaLF?w=684&h=1024&rs=1&pid=ImgDetMain"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -530,9 +596,9 @@
                             <img src="https://th.bing.com/th/id/OIP.QyGhx3s0Go4gAEF1EoxFhAHaLH?rs=1&pid=ImgDetMain"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -541,9 +607,9 @@
                             <img src="https://th.bing.com/th/id/OIP.XqUvGa9WrGstgnZOpkxgVQHaLH?rs=1&pid=ImgDetMain"
                                 alt="">
                         </div>
-                        <div>WHITE SUBTLE SHEEN SUIT</div>
-                        <p>Product Description</p>
-                        <p>Available Sizes : 38</p>
+                        <div class="productTitle">WHITE SUBTLE SHEEN SUIT</div>
+                        <p class="productDescription">Product Description</p>
+                        <p class="productSizes">Available Sizes : 38</p>
                     </div>
                 </div>
             </div>
@@ -559,11 +625,11 @@
     <section class="imageSection" style="padding-top: 20px; padding-bottom: 50px;">
         <div class="swiperHeading" style="margin-bottom: 40px;">
             <h1 class="swiperHeadingText" style="letter-spacing: 5px;" id="swiperMainHeading">
-                <span style="font-family: 'Open Sans', sans-serif; font-weight: 200;  margin-top: 20px;">HERITAGE
+                <span style="font-family: 'Open Sans', sans-serif; font-weight: 200;  margin-top: 20px; color: #FFFFFF">HERITAGE
                     COLLECTION FOR KINGS
                 </span>
             </h1>
-            <h1 class="swiperHeadingText tracking-wider">
+            <h1 class="swiperHeadingText tracking-wider" style="color: #FFFFFF;">
                 Explore our exclusive collection of heritage suits
             </h1>
         </div>
@@ -690,9 +756,11 @@
                 Sign up to our newsletter to receive exclusive offers.
             </p>
             <div class="newsletterFormContainer">
-                <div class="newsletterFormInputContainer"><input id="email-box" type="email" type="text" placeholder="E-mail"></div>
+                <div class="newsletterFormInputContainer"><input id="email-box" type="email" type="text"
+                        placeholder="E-mail"></div>
                 <div>
-                    <button type="button" onclick="showMessage()" class="btn btn-2 hover-slide-right" style="width: 300px;">
+                    <button type="button" onclick="showMessage()" class="btn btn-2 hover-slide-right"
+                        style="width: 300px;">
                         <span>SUBSCRIBE</span>
                     </button>
                 </div>
@@ -702,54 +770,51 @@
     </section>
 
     <section class="WomenSection pt-10"
-        style="font-family: 'Open Sans', sans-serif; background-color: black; color: white; margin-bottom: 0px;">
-        <div class="swiperHeading" style="margin-bottom: 40px;">
-            <h1 class="swiperHeadingText" style="letter-spacing: 5px;" id="swiperMainHeading">
-                <span style="font-family: 'Open Sans', sans-serif; font-weight: 200;  margin-top: 20px;">WOMEN'S
-                    COLLECTION</span>
-            </h1>
-            <h1 class="swiperHeadingText tracking-wider">
-                Explore our exclusive collection of heritage Sarees
-            </h1>
-        </div>
-        <div class="WomenSectionContainer" style="margin:50px 50px;">
-            <div class="grid-item" id="women1">
-                <img src="https://www.libasco.com/product_images/uploaded_images/3l.jpg" class="gridImage" alt="">
-                <div class="btnContainer">
-                    <h1 class="gridImageHeading">
-                        SARRES
-                    </h1>
-                    <button class="btn btn-3 hover-slide-right">
-                        <span>VIEW MORE</span>
-                    </button>
-                </div>
-            </div>
-            <div class="grid-item" id="women2">
-                <img src="https://www.inddus.in/cdn/shop/products/floral-embroidered-fit-flare-maxi-ethnic-dress-with-dupatta-308735.jpg?v=1696663063"
-                    class="gridImage" alt="">
-                <div class="btnContainer">
-                    <h1 class="gridImageHeading">
-                        STYLISH
-                    </h1>
-                    <button class="btn btn-3 hover-slide-right">
-                        <span>VIEW MORE</span>
-                    </button>
-                </div>
-            </div>
-            <div class="grid-item" id="women3">
-                <img src="https://asianpartywear.com/cdn/shop/products/13912570_1827567694141430_2323820803583705994_n.jpg?v=1612931624"
-                    class="gridImage" alt="">
-                <div class="btnContainer">
-                    <h1 class="gridImageHeading">
-                        DRESSES
-                    </h1>
-                    <button class="btn btn-3 hover-slide-right">
-                        <span>VIEW MORE</span>
-                    </button>
-                </div>
+        style="font-family: 'Open Sans', sans-serif; background-color: black; color: white; margin-bottom: 0; overflow: hidden;">
+    <div class="swiperHeading" style="margin-bottom: 40px;">
+        <h1 class="swiperHeadingText" style="letter-spacing: 5px; color: #FFFFFF;" id="swiperMainHeading">
+            WOMEN'S COLLECTION
+        </h1>
+        <h1 class="swiperHeadingText tracking-wider" style="color: #FFFFFF; overflow-y: hidden;">
+            Explore our exclusive collection of heritage Sarees
+        </h1>
+    </div>
+    <div class="WomenSectionContainer" style="margin: 50px;">
+        <div class="grid-item" id="women1">
+            <img src="https://www.libasco.com/product_images/uploaded_images/3l.jpg" class="gridImage" alt="">
+            <div class="btnContainer">
+                <h1 class="gridImageHeading" style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem;">
+                    SARRES
+                </h1>
+                <button class="btn btn-3 hover-slide-right">
+                    <span>VIEW MORE</span>
+                </button>
             </div>
         </div>
-    </section>
+        <div class="grid-item" id="women2">
+            <img src="https://www.inddus.in/cdn/shop/products/floral-embroidered-fit-flare-maxi-ethnic-dress-with-dupatta-308735.jpg?v=1696663063" class="gridImage" alt="">
+            <div class="btnContainer">
+                <h1 class="gridImageHeading" style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem;">
+                    STYLISH
+                </h1>
+                <button class="btn btn-3 hover-slide-right">
+                    <span>VIEW MORE</span>
+                </button>
+            </div>
+        </div>
+        <div class="grid-item" id="women3">
+            <img src="https://asianpartywear.com/cdn/shop/products/13912570_1827567694141430_2323820803583705994_n.jpg?v=1612931624" class="gridImage" alt="">
+            <div class="btnContainer">
+                <h1 class="gridImageHeading" style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem;">
+                    DRESSES
+                </h1>
+                <button class="btn btn-3 hover-slide-right">
+                    <span>VIEW MORE</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <section class="collectionSection mt-10" style="font-family: 'Open Sans', sans-serif;">
@@ -1058,7 +1123,8 @@
                     <ul class="footerList font-tenor">
                         <li>Our Tale</li>
                         <li>Our Stories</li>
-                        <li><a href="../t&C/t&C.html" style="text-decoration: none; font-weight: normal;">Terms and Conditions</a></li>
+                        <li><a href="../t&C/t&C.html" style="text-decoration: none; font-weight: normal;">Terms and
+                                Conditions</a></li>
                         <li>We Care</li>
                     </ul>
                 </div>
@@ -1077,7 +1143,8 @@
                         <li>Payment Policy</li>
                         <li>Shipping &amp; Policy</li>
                         <li>Track your order / Return</li>
-                        <li><a href="../FAQ's/index.html" style="text-decoration: none; font-weight: normal;">FAQs</a></li>
+                        <li><a href="../FAQ's/index.html" style="text-decoration: none; font-weight: normal;">FAQs</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="max-[700px]:hidden text-left text-xs sm:text-sm md:text-base">
