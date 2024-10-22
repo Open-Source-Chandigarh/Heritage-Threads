@@ -369,8 +369,29 @@ html{
     padding: 0 10px;
     max-width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.5s ease;
 }
-
+.btnArea{
+    display: flex;
+    justify-content: center;
+    padding:25px 0;
+}
+.halfView{
+    height:320vh;
+}
+.addBlur{
+    filter: blur(8px);
+}
+.btnHalfView{
+    position: relative;
+    top:-100px;
+    margin-bottom: -100px;
+}
+.my-height{
+    position: relative;
+    top:140vh;
+}
 .collectionContainer .grid-item {
     background-color: #f0f0f0;
     position: relative;

@@ -291,7 +291,10 @@ function showMessage() {
       title: "Error!",
       text: "Missing Email",
       icon: "error",
-      confirmButtonText: "OK"
+      confirmButtonText: "OK",
+      customClass: {
+        popup: "my-height",
+      },
     });
   } else {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -300,7 +303,10 @@ function showMessage() {
         title: "Error!",
         text: "Invalid email address",
         icon: "error",
-        confirmButtonText: "OK"
+        confirmButtonText: "OK",
+        customClass: {
+          popup: "my-height",
+        },
       });
       return;
     } else {
@@ -309,9 +315,36 @@ function showMessage() {
         text: "Thank You for Subscribing!",
         icon: "success",
         confirmButtonText: "OK",
+        customClass: {
+          popup: "my-height",
+        },
       });
       document.getElementById("email-box").value = "";
     }
   }
 }
 
+// Heritage Collections section
+let hc = Array.from(document.querySelectorAll(".addBlur"));
+let ViewBtn = document.getElementById("ViewAllBtn");
+let ViewHeight = document.getElementsByClassName("collectionContainer");
+let btnView = document.getElementsByClassName("btnArea");
+ViewBtn.addEventListener("click", function () {
+  let btnText = ViewBtn.querySelector("span");
+  if (btnText.innerHTML === "View all collections") {
+     hc.forEach(function (element) {
+       element.classList.remove("addBlur");
+     });
+    ViewHeight[0].classList.remove("halfView");
+    btnView[0].classList.remove("btnHalfView");
+    btnText.innerHTML = "Show Less";
+  } else {
+    btnText.innerHTML = "View all collections";
+    hc.forEach(function (element) {
+      element.classList.add("addBlur");
+    });
+    ViewHeight[0].classList.add("halfView");
+    btnView[0].classList.add("btnHalfView");
+    ViewBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+});
