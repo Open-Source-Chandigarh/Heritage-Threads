@@ -82,7 +82,7 @@ let searchResultCards = document.querySelector(".searchResultCards");
       price: "$89.99"
     },
     {
-      imgSrc: "https://d6kigqwjl9u8w.cloudfront.net/wysiwyg/3_59.jpg",
+      imgSrc: "https://d2x02matzb08hy.cloudfront.net/img/project_photo/image/10214762/27912/Untitled_design__6_.jpg",
       title: "Cotton Kurta Set",
       price: "$49.99"
     },
